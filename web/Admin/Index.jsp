@@ -29,11 +29,11 @@
             />
         <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
         <!--Css lib-->
-        <link rel="stylesheet" href="css/Index.css" />
-        <link rel="stylesheet" href="css/Container-right.css" />
-        <link rel="stylesheet" href="css/SideBar.css" />
-        <link rel="stylesheet" href="css/TopBar.css" />
-        <link rel="stylesheet" href="css/DashBoard.css" />
+        <link rel="stylesheet" href="Admin/css/Index.css" />
+        <link rel="stylesheet" href="Admin/css/Container-right.css" />
+        <link rel="stylesheet" href="Admin/css/SideBar.css" />
+        <link rel="stylesheet" href="Admin/css/TopBar.css" />
+        <link rel="stylesheet" href="Admin/css/DashBoard.css" />
 
         <script
             src="https://kit.fontawesome.com/e96465b91f.js"
@@ -50,28 +50,31 @@
 
         <div class="wrapper">
             <!-- SideBar -->
-            <jsp:include page="components/sideBar.jsp"/>
+            <jsp:include page="./components/sideBar.jsp"/>
 
             <div class="container-right">
                 <!-- Topbar -->
-                <jsp:include page="components/topBar.jsp"/>
+                <jsp:include page="./components/topBar.jsp"/>
                 
-                <!--Content-->
+                <!--Main panel for main entity-->
                 <%
                     if (request.getParameter("value") == null) {
                 %>
-                <jsp:include page="components/dashboard.jsp"/>
+                <jsp:include page="./components/dashboard.jsp"/>
                 <% } else if (request.getParameter("value").equalsIgnoreCase("books")) {
                 %>
-                <jsp:include page="components/books.jsp"/>
+                <jsp:include page="./components/books.jsp"/>
                 <% } else if (request.getParameter("value").equalsIgnoreCase("users")) {
                 %>
-                <jsp:include page="components/users.jsp"/>
+                <jsp:include page="./components/users.jsp"/>
                 <% } else if (request.getParameter("value").equalsIgnoreCase("orders")) {
                 %>
-                <jsp:include page="components/orders.jsp"/>
+                <jsp:include page="./components/orders.jsp"/>
                 <% }
                 %>
+                
+                
+              
             </div>
         </div>
 
@@ -107,13 +110,13 @@
         %>
         <% } else if (request.getParameter("value").equalsIgnoreCase("books")) {
         %>
-        <jsp:include page="components/dataComponents/books.jsp"/>
+        <jsp:include page="./components/dataComponents/books.jsp"/>
         <% } else if (request.getParameter("value").equalsIgnoreCase("users")) {
         %>
-        <jsp:include page="components/dataComponents/users.jsp"/>
+        <jsp:include page="./components/dataComponents/users.jsp"/>
         <% } else if (request.getParameter("value").equalsIgnoreCase("orders")) {
         %>
-        <jsp:include page="components/orders.jsp"/>
+        <jsp:include page="./components/orders.jsp"/>
         <% }
         %>
 

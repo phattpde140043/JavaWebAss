@@ -18,8 +18,8 @@
             crossorigin="anonymous"
             />
         <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/Login.css">
-        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="Admin/css/Login.css">
+        <link rel="stylesheet" href="Admin/css/index.css">
     </head>
     <body>
 
@@ -57,9 +57,6 @@
                                             <div class="form-group">
                                                 <input type="submit" value="button" class="btn btn-primary btn-user btn-block"/>
                                             </div>
-                                            <a href="index" class="btn btn-primary btn-user btn-block">
-                                                Login
-                                            </a>
                                             <hr>
                                             <a href="index" class="btn btn-google btn-user btn-block">
                                                 <i class="fab fa-google fa-fw"></i> Login with Google
