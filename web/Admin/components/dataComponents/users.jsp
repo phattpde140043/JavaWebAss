@@ -17,16 +17,20 @@
     <% for (int i = 0; i < bl.size(); i++) {%>
     dataSet.push(<%= bl.get(i).toString()%>);
     <% }%>
-    $("#userDataTable").DataTable(
-            {
-                data: dataSet,
-                columns: [
-                    {title: "ID"},
-                    {title: "Email"},
-                    {title: "Password"},
-                    {title: "Username"},
-                    {title: "Phone"},
-                    {title: "Address"}
-                ]
-            });
+    
+        $(document).ready(function () {
+        var table = $('#userDataTable')
+                .DataTable({
+                    "lengthMenu": [[-1, 50, 20, 10], ["All", 50, 20, 10]],
+                    "data": dataSet
+                });
+
+        $('#userDataTable tbody tr').each(function ()
+        {
+
+//        Action to edit and delete book !!!
+
+            $(this).append('<td><a href="users?value=update&id=' + table.row(this).data()[0] + '" class="btn btn-primary btn-sm" role="button" aria-pressed="true">Edit</a></td>');
+        });
+    });
 </script>

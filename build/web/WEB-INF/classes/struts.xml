@@ -26,5 +26,22 @@
             <result name="success">Admin/BookRoute.jsp</result>
             <result name="fail">Admin/Failed.jsp</result>        
         </action>
+        <action name="updateBook" class="Struct.UpdateBookAction">
+            <result name="success">Admin/BookRoute.jsp</result>
+            <result name="fail">Admin/Failed.jsp</result>        
+        </action>
+        
+        <action name="users">
+            <result>Admin/UserRoute.jsp</result>
+        </action>
+        <action name="newUser" class="Struct.NewUserAction" >
+            <result name="success">Admin/UserRoute.jsp</result>
+            <result name="fail">Admin/Failed.jsp</result>
+        </action>
+        <action name="updateUser" class="Struct.UpdateUserAction">
+            <result name="success">Admin/UserRoute.jsp</result>
+            <result name="fail">Admin/Failed.jsp</result>        
+        </action>
+
     </package>
 </struts>

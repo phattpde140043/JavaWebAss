@@ -33,7 +33,7 @@
 
 //        Action to edit and delete book !!!
 
-            $(this).append('<td><a href="updateBook?id=' + table.row(this).data()[0] + '" class="btn btn-primary btn-sm" role="button" aria-pressed="true">Edit</a> <a href="deleteBook?id=' + table.row(this).data()[0] + '" class="btn btn-danger btn-sm" role="button" aria-pressed="true">Del</a></td>');
+            $(this).append('<td><a href="books?value=update&id=' + table.row(this).data()[0] + '" class="btn btn-primary btn-sm" role="button" aria-pressed="true">Edit</a> <a href="deleteBook?id=' + table.row(this).data()[0] + '" class="btn btn-danger btn-sm" role="button" aria-pressed="true">Del</a></td>');
         });
     });
 

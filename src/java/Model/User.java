@@ -20,6 +20,16 @@ public class User {
     public User() {
     }
 
+    public User(String uEmail, String uPassword, String uName, String uPhone, String uAddress) {
+        this.uEmail = uEmail;
+        this.uPassword = uPassword;
+        this.uName = uName;
+        this.uPhone = uPhone;
+        this.uAddress = uAddress;
+    }
+
+    
+    
     public User(String uID, String uEmail, String uPassword, String uName, String uPhone, String uAddress) {
         this.uID = uID;
         this.uEmail = uEmail;

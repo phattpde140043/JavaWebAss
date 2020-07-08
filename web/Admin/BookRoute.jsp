@@ -3,13 +3,6 @@
     Created on : Jun 26, 2020, 8:03:55 PM
     Author     : Admin
 --%>
-
-<%@page import="Controller.UserDB"%>
-<%@page import="Model.User"%>
-<%@page import="Controller.BookDB"%>
-<%@page import="Controller.BookDB"%>
-<%@page import="java.util.*"%>
-<%@page import="Model.Book"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
@@ -64,12 +57,9 @@
                 <% } else if (request.getParameter("value").equalsIgnoreCase("addNew")) {
                 %>
                 <jsp:include page="./components/booksAddNew.jsp"/>
-                <% } else if (request.getParameter("value").equalsIgnoreCase("users")) {
+                <% } else if (request.getParameter("value").equalsIgnoreCase("update")) {
                 %>
-                <jsp:include page="./components/users.jsp"/>
-                <% } else if (request.getParameter("value").equalsIgnoreCase("orders")) {
-                %>
-                <jsp:include page="./components/orders.jsp"/>
+                <jsp:include page="./components/booksUpdate.jsp"/>
                 <% }
                 %>
             </div>
@@ -109,13 +99,7 @@
         <% } else if (request.getParameter("value").equalsIgnoreCase("")) {
         %>
         <jsp:include page="./components/dataComponents/books.jsp"/>
-        <% } else if (request.getParameter("value").equalsIgnoreCase("users")) {
-        %>
-        <jsp:include page="./components/dataComponents/users.jsp"/>
-        <% } else if (request.getParameter("value").equalsIgnoreCase("orders")) {
-        %>
-        <jsp:include page="./components/orders.jsp"/>
-        <%}
+        <% }
         %>
 
         </body>

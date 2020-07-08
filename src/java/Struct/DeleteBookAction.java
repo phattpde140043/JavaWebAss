@@ -34,9 +34,11 @@ public class DeleteBookAction {
 
     public String execute() throws Exception {
         try {
-            String result = this.id;
-            System.out.println("params" + result);
             String URL = FAIL;
+            boolean result = BookDBAdmin.deleteBook(this.id);
+            if (result) {
+                URL = SUCCESS;
+            }
             return URL;
         } catch (Exception e) {
             return FAIL;

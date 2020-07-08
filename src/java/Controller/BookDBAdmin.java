@@ -47,7 +47,7 @@ public class BookDBAdmin {
     }
 
     /* ================================================================= */
-    public static void updateBook(Book bk) {
+    public static boolean updateBook(Book bk) {
         try {
             Class.forName(driverName);
             Connection con = DriverManager.getConnection(dbURL, userDB, passDB);
@@ -59,39 +59,40 @@ public class BookDBAdmin {
             stmt.setString(5, bk.getbAuthor());
             stmt.setString(6, bk.getbDes());
             stmt.setString(7, bk.getbCover());
+            stmt.setString(8, bk.getbId());
             int rc = stmt.executeUpdate();
             con.close();
             if (rc != 1) {
                 throw new RuntimeException("Update failed");
             }
+            return true;
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
+            return false;
         }
     }
 
     /* ================================================================= */
-    public static void deleteBook(Book bk) {
+    public static boolean deleteBook(String id) {
         try {
             Class.forName(driverName);
             Connection con = DriverManager.getConnection(dbURL, userDB, passDB);
             PreparedStatement stmt = con.prepareStatement("DELETE FROM Books WHERE bID=?");
-            stmt.setString(1, bk.getbName());
-            stmt.setString(2, bk.getCatId());
-            stmt.setFloat(3, bk.getbPrice());
-            stmt.setInt(4, bk.getbQuantity());
-            stmt.setString(5, bk.getbAuthor());
-            stmt.setString(6, bk.getbDes());
-            stmt.setString(7, bk.getbCover());
+            stmt.setString(1, id);
             int rc = stmt.executeUpdate();
             con.close();
             if (rc != 1) {
                 throw new RuntimeException("Delete failed");
             }
+            return true;
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
-
+            return false;
         }
     }
 
-    
+    public static void main(String[] args) {
+        System.out.println("delete : " + BookDBAdmin.deleteBook("B0037"));
+    }
+
 }

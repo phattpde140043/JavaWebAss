@@ -15,8 +15,9 @@ import javax.servlet.http.HttpServletRequest;
  *
  * @author Admin
  */
-public class NewBookAction {
+public class UpdateBookAction {
 
+    private String id;
     private String title;
     private String author;
     private String category;
@@ -26,6 +27,14 @@ public class NewBookAction {
     private String cover = "";
 
     private final String SUCCESS = "success";
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getTitle() {
         return title;
@@ -84,13 +93,13 @@ public class NewBookAction {
     }
     private final String FAIL = "fail";
 
-    public NewBookAction() {
+    public UpdateBookAction() {
     }
 
     public String execute() throws Exception {
         try {
-            Book b = new Book(title, category, price, quantity, author, description, cover);
-            boolean result = BookDBAdmin.addNewBook(b);
+            Book b = new Book(id, title, category, price, quantity, author, description, cover);
+            boolean result = BookDBAdmin.updateBook(b);
             String URL = FAIL;
             if (result) {
                 Map session = ActionContext.getContext().getSession();

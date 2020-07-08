@@ -290,4 +290,7 @@ public class TransactionDB implements DatabaseInfo {
             System.out.println(e);
         }
     }
+    
+    public static void main(String[] args) {                
+    }
 }

@@ -3,7 +3,6 @@
     Created on : Jun 26, 2020, 8:03:55 PM
     Author     : Admin
 --%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
@@ -49,26 +48,19 @@
             <div class="container-right">
                 <!-- Topbar -->
                 <jsp:include page="./components/topBar.jsp"/>
-                
+
                 <!--Main panel for main entity-->
                 <%
                     if (request.getParameter("value") == null) {
                 %>
-                <jsp:include page="./components/dashboard.jsp"/>
-                <% } else if (request.getParameter("value").equalsIgnoreCase("books")) {
-                %>
-                <jsp:include page="./components/books.jsp"/>
-                <% } else if (request.getParameter("value").equalsIgnoreCase("users")) {
-                %>
                 <jsp:include page="./components/users.jsp"/>
-                <% } else if (request.getParameter("value").equalsIgnoreCase("orders")) {
+                <% } else if (request.getParameter("value").equalsIgnoreCase("addNew")) {
                 %>
-                <jsp:include page="./components/orders.jsp"/>
-                <% }
+                <jsp:include page="./components/usersAddNew.jsp"/>
+                <% } else if (request.getParameter("value").equalsIgnoreCase("update")) {
                 %>
-                
-                
-              
+                <jsp:include page="./components/usersUpdate.jsp"/>
+                <% } %>
             </div>
         </div>
 
@@ -102,15 +94,10 @@
         <%
             if (request.getParameter("value") == null) {
         %>
-        <% } else if (request.getParameter("value").equalsIgnoreCase("books")) {
-        %>
-        <jsp:include page="./components/dataComponents/books.jsp"/>
-        <% } else if (request.getParameter("value").equalsIgnoreCase("users")) {
+        <jsp:include page="./components/dataComponents/users.jsp"/>
+        <% } else if (request.getParameter("value").equalsIgnoreCase("")) {
         %>
         <jsp:include page="./components/dataComponents/users.jsp"/>
-        <% } else if (request.getParameter("value").equalsIgnoreCase("orders")) {
-        %>
-        <jsp:include page="./components/orders.jsp"/>
         <% }
         %>
 
