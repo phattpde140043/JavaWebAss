@@ -29,16 +29,6 @@
             <jsp:include page="./components/slider.jsp"/>
             <!-- slider -->
             <jsp:include page="./components/slider.jsp"/>
-            <!-- slider -->
-            <jsp:include page="./components/slider.jsp"/>
-            <!-- slider -->
-            <jsp:include page="./components/slider.jsp"/>
-            <!-- slider -->
-            <jsp:include page="./components/slider.jsp"/>
-            <!-- slider -->
-            <jsp:include page="./components/slider.jsp"/>
-            <!-- slider -->
-            <jsp:include page="./components/slider.jsp"/>
 
 
         <!-- footer -->

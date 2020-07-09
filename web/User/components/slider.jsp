@@ -5,11 +5,12 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<link rel="stylesheet" href="User/css/slider.css" />
 <div class="slider">
     <%
         int min = 50;
         int max = 100;
-        double random_double = Math.random() * (max - min + 1) + min; 
+        double random_double = Math.random() * (max - min + 1) + min;
     %>
     <h2 class="pb-3">My List</h2>
     <div class="container p-0">
@@ -23,71 +24,158 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="row d-flex justify-content-center">
-                        <a href="#" class="col-xs-6 col-md-6 col-lg-2 p-0 d-flex justify-content-center">
+                        <div class="m-2 col-xs-6 col-md-6 col-lg-2 p-0 m-0 d-flex justify-content-center flex-column box">
                             <img src="User/img/1.jpg" alt="" class="w-100">
-                        </a>
+                            <p class="title p-0 m-0"><a href="">card title</a></p>
+                            <div class="overlay"></div>
+                            <div class="button w-100 p-0 m-0">
+                                <a href="#" class="">Buy</a>
+                            </div>
+                        </div>
 
-                        <a href="#" class="col-xs-6 col-md-6 col-lg-2 p-0 d-flex justify-content-center">
-                            <img src="User/img/2.jpg" alt="" class="w-100">
-                        </a>
+                        <div class="m-2 col-xs-6 col-md-6 col-lg-2 p-0 m-0 d-flex justify-content-center flex-column box">
+                            <img src="User/img/1.jpg" alt="" class="w-100">
+                            <p class="title p-0 m-0"><a href="">card title</a></p>
+                            <div class="overlay"></div>
+                            <div class="button w-100 p-0 m-0">
+                                <a href="#" class="">Buy</a>
+                                <!-- <a href="#" class="btn btn-primary">Detail</a> -->
+                            </div>
+                        </div>
 
-                        <a href="#" class="col-xs-6 col-md-6 col-lg-2 p-0 d-flex justify-content-center">
-                            <img src="User/img/3.jpg" alt="" class="w-100">
-                        </a>
+                        <div class="m-2 col-xs-6 col-md-6 col-lg-2 p-0 m-0 d-flex justify-content-center flex-column box">
+                            <img src="User/img/1.jpg" alt="" class="w-100">
+                            <p class="title p-0 m-0"><a href="">card title</a></p>
+                            <div class="overlay"></div>
+                            <div class="button w-100 p-0 m-0">
+                                <a href="#" class="">Buy</a>
+                                <!-- <a href="#" class="btn btn-primary">Detail</a> -->
+                            </div>
+                        </div>
 
-                        <a href="#" class="col-xs-6 col-md-6 col-lg-2 p-0 d-flex justify-content-center">
-                            <img src="User/img/4.jpg" alt="" class="w-100">
-                        </a>
+                        <div class="m-2 col-xs-6 col-md-6 col-lg-2 p-0 m-0 d-flex justify-content-center flex-column box">
+                            <img src="User/img/1.jpg" alt="" class="w-100">
+                            <p class="title p-0 m-0"><a href="">card title</a></p>
+                            <div class="overlay"></div>
+                            <div class="button w-100 p-0 m-0">
+                                <a href="#" class="">Buy</a>
+                                <!-- <a href="#" class="btn btn-primary">Detail</a> -->
+                            </div>
+                        </div>
 
-                        <a href="#" class="col-xs-6 col-md-6 col-lg-2 p-0 d-flex justify-content-center">
-                            <img src="User/img/5.jpg" alt="" class="w-100">
-                        </a>
+                        <div class="m-2 col-xs-6 col-md-6 col-lg-2 p-0 m-0 d-flex justify-content-center flex-column box">
+                            <img src="User/img/1.jpg" alt="" class="w-100">
+                            <p class="title p-0 m-0"><a href="">card title</a></p>
+                            <div class="overlay"></div>
+                            <div class="button w-100 p-0 m-0">
+                                <a href="#" class="">Buy</a>
+                                <!-- <a href="#" class="btn btn-primary">Detail</a> -->
+                            </div>
+                        </div>
+                    </div>                      
+                </div>
+                <div class="carousel-item">
+                    <div class="row d-flex justify-content-center">
+                        <div class="m-2 col-xs-6 col-md-6 col-lg-2 p-0 m-0 d-flex justify-content-center flex-column box">
+                            <img src="User/img/1.jpg" alt="" class="w-100">
+                            <p class="title p-0 m-0"><a href="">card title</a></p>
+                            <div class="overlay"></div>
+                            <div class="button w-100 p-0 m-0">
+                                <a href="#" class="">Buy</a>
+                            </div>
+                        </div>
+
+                        <div class="m-2 col-xs-6 col-md-6 col-lg-2 p-0 m-0 d-flex justify-content-center flex-column box">
+                            <img src="User/img/1.jpg" alt="" class="w-100">
+                            <p class="title p-0 m-0"><a href="">card title</a></p>
+                            <div class="overlay"></div>
+                            <div class="button w-100 p-0 m-0">
+                                <a href="#" class="">Buy</a>
+                                <!-- <a href="#" class="btn btn-primary">Detail</a> -->
+                            </div>
+                        </div>
+
+                        <div class="m-2 col-xs-6 col-md-6 col-lg-2 p-0 m-0 d-flex justify-content-center flex-column box">
+                            <img src="User/img/1.jpg" alt="" class="w-100">
+                            <p class="title p-0 m-0"><a href="">card title</a></p>
+                            <div class="overlay"></div>
+                            <div class="button w-100 p-0 m-0">
+                                <a href="#" class="">Buy</a>
+                                <!-- <a href="#" class="btn btn-primary">Detail</a> -->
+                            </div>
+                        </div>
+
+                        <div class="m-2 col-xs-6 col-md-6 col-lg-2 p-0 m-0 d-flex justify-content-center flex-column box">
+                            <img src="User/img/1.jpg" alt="" class="w-100">
+                            <p class="title p-0 m-0"><a href="">card title</a></p>
+                            <div class="overlay"></div>
+                            <div class="button w-100 p-0 m-0">
+                                <a href="#" class="">Buy</a>
+                                <!-- <a href="#" class="btn btn-primary">Detail</a> -->
+                            </div>
+                        </div>
+
+                        <div class="m-2 col-xs-6 col-md-6 col-lg-2 p-0 m-0 d-flex justify-content-center flex-column box">
+                            <img src="User/img/1.jpg" alt="" class="w-100">
+                            <p class="title p-0 m-0"><a href="">card title</a></p>
+                            <div class="overlay"></div>
+                            <div class="button w-100 p-0 m-0">
+                                <a href="#" class="">Buy</a>
+                                <!-- <a href="#" class="btn btn-primary">Detail</a> -->
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="row d-flex justify-content-center">
-                        <a href="#" class="col-xs-6 col-md-6 col-lg-2 p-0 d-flex justify-content-center">
-                            <img src="User/img/6.jpg" alt="" class="w-100">
-                        </a>
-
-                        <a href="#" class="col-xs-6 col-md-6 col-lg-2 p-0 d-flex justify-content-center">
-                            <img src="User/img/2.jpg" alt="" class="w-100">
-                        </a>
-
-                        <a href="#" class="col-xs-6 col-md-6 col-lg-2 p-0 d-flex justify-content-center">
-                            <img src="User/img/4.jpg" alt="" class="w-100">
-                        </a>
-
-                        <a href="#" class="col-xs-6 col-md-6 col-lg-2 p-0 d-flex justify-content-center">
-                            <img src="User/img/10.jpg" alt="" class="w-100">
-                        </a>
-
-                        <a href="#" class="col-xs-6 col-md-6 col-lg-2 p-0 d-flex justify-content-center">
+                        <div class="m-2 col-xs-6 col-md-6 col-lg-2 p-0 m-0 d-flex justify-content-center flex-column box">
                             <img src="User/img/1.jpg" alt="" class="w-100">
-                        </a>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="row d-flex justify-content-center">
-                        <a href="#" class="col-xs-6 col-md-6 col-lg-2 p-0 d-flex justify-content-center">
-                            <img src="User/img/2.jpg" alt="" class="w-100">
-                        </a>
+                            <p class="title p-0 m-0"><a href="">card title</a></p>
+                            <div class="overlay"></div>
+                            <div class="button w-100 p-0 m-0">
+                                <a href="#" class="">Buy</a>
+                            </div>
+                        </div>
 
-                        <a href="#" class="col-xs-6 col-md-6 col-lg-2 p-0 d-flex justify-content-center">
-                            <img src="User/img/5.jpg" alt="" class="w-100">
-                        </a>
+                        <div class="m-2 col-xs-6 col-md-6 col-lg-2 p-0 m-0 d-flex justify-content-center flex-column box">
+                            <img src="User/img/1.jpg" alt="" class="w-100">
+                            <p class="title p-0 m-0"><a href="">card title</a></p>
+                            <div class="overlay"></div>
+                            <div class="button w-100 p-0 m-0">
+                                <a href="#" class="">Buy</a>
+                                <!-- <a href="#" class="btn btn-primary">Detail</a> -->
+                            </div>
+                        </div>
 
-                        <a href="#" class="col-xs-6 col-md-6 col-lg-2 p-0 d-flex justify-content-center">
-                            <img src="User/img/8.jpg" alt="" class="w-100">
-                        </a>
+                        <div class="m-2 col-xs-6 col-md-6 col-lg-2 p-0 m-0 d-flex justify-content-center flex-column box">
+                            <img src="User/img/1.jpg" alt="" class="w-100">
+                            <p class="title p-0 m-0"><a href="">card title</a></p>
+                            <div class="overlay"></div>
+                            <div class="button w-100 p-0 m-0">
+                                <a href="#" class="">Buy</a>
+                                <!-- <a href="#" class="btn btn-primary">Detail</a> -->
+                            </div>
+                        </div>
 
-                        <a href="#" class="col-xs-6 col-md-6 col-lg-2 p-0 d-flex justify-content-center">
-                            <img src="User/img/10.jpg" alt="" class="w-100">
-                        </a>
+                        <div class="m-2 col-xs-6 col-md-6 col-lg-2 p-0 m-0 d-flex justify-content-center flex-column box">
+                            <img src="User/img/1.jpg" alt="" class="w-100">
+                            <p class="title p-0 m-0"><a href="">card title</a></p>
+                            <div class="overlay"></div>
+                            <div class="button w-100 p-0 m-0">
+                                <a href="#" class="">Buy</a>
+                                <!-- <a href="#" class="btn btn-primary">Detail</a> -->
+                            </div>
+                        </div>
 
-                        <a href="#" class="col-xs-6 col-md-6 col-lg-2 p-0 d-flex justify-content-center">
-                            <img src="User/img/3.jpg" alt="" class="w-100">
-                        </a>
+                        <div class="m-2 col-xs-6 col-md-6 col-lg-2 p-0 m-0 d-flex justify-content-center flex-column box">
+                            <img src="User/img/1.jpg" alt="" class="w-100">
+                            <p class="title p-0 m-0"><a href="">card title</a></p>
+                            <div class="overlay"></div>
+                            <div class="button w-100 p-0 m-0">
+                                <a href="#" class="">Buy</a>
+                                <!-- <a href="#" class="btn btn-primary">Detail</a> -->
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
