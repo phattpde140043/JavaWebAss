@@ -10,7 +10,7 @@
     id="top-bar"
     >
     <a class="navbar-brand pl-5" href="#">
-        <img src="./img/LOGO.png" alt="" id="logo">
+        <img src="User/img/LOGO.png" alt="" id="logo">
     </a>
     <button
         class="navbar-toggler mr-5"

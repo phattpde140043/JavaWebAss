@@ -150,6 +150,6 @@
 
     </div>
     <div  class="col-xl-6 p-0 d-flex justify-content-start align-items-start">
-        <img class="w-100 pt-5 px-5" src="Admin/images/undraw_throw_away_ldjd.svg" alt=""adding>
+        <img class="w-100 pt-5 px-5 ml-5" src="Admin/images/undraw_throw_away_ldjd.svg" alt=""adding>
     </div>
 </div>

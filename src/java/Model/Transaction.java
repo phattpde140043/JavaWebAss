@@ -85,7 +85,7 @@ public class Transaction {
 
     @Override
     public String toString() {
-        return "Transaction{" + "tID=" + tID + ", uID=" + us + ", Cart=" + Cart + ", Status=" + Status + ", tDate=" + tDate + '}';
+        return "[\"" + tID + "\", \"" + us.getuName() + "\", \"" + Cart + "\", \"" + tDate + "\", \"" + Status + "\"]";
     }
 
 }

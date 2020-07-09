@@ -6,7 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <footer>
-    <div class="container" style="height: 30vh;">
+    <div class="container" style="height: 10vh;">
         <div class="social-btn"></div>
         <div class="service"></div>
         <div class="nocopy row">

@@ -112,6 +112,6 @@
 
     </div>
     <div  class="col-xl-6 p-0 d-flex justify-content-between align-items-start">
-        <img class="w-100 px-5 mt-5" src="Admin/images/undraw_add_user_ipe3.svg" alt=""adding>
+        <img class="w-100 px-5 mt-5" src="Admin/images/undraw_super_thank_you_obwk.svg" alt=""adding>
     </div>
 </div>

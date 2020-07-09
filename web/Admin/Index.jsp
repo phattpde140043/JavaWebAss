@@ -110,7 +110,7 @@
         <jsp:include page="./components/dataComponents/users.jsp"/>
         <% } else if (request.getParameter("value").equalsIgnoreCase("orders")) {
         %>
-        <jsp:include page="./components/orders.jsp"/>
+        <jsp:include page="./components/dataComponents/transactions.jsp"/>
         <% }
         %>
 
