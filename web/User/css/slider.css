@@ -1,5 +1,6 @@
 .slider {
   padding-left: 4rem;
+  position: relative;
 }
 
 .slider .queue {
@@ -28,6 +29,9 @@
 
 .slider h2 {
   font-size: 1.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 #carouselExampleIndicators {
@@ -102,7 +106,7 @@
   text-transform: uppercase;
   color: white;
   z-index: 1;
-  transition: top 0.5s ease;
+  transition: top 0.4s ease;
   opacity: 0;
 }
 
@@ -126,10 +130,18 @@
   padding: 12px 48px;
   text-align: center;
   color: white;
-  border: solid 2px white;
   z-index: 1;
 }
 
 .box:hover .button {
   opacity: 1;
+}
+
+.box svg {
+    width: 0px ;
+    transition: width 0.7s ease;
+}
+
+.box:hover svg {
+   width: 2rem !important;
 }

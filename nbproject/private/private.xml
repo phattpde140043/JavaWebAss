@@ -2,6 +2,27 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/User/components/slider.jsp</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/Admin/components/users.jsp</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/src/java/Model/Transaction.java</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/Admin/components/dataComponents/books.jsp</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/src/java/Controller/TransactionDB.java</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/User/Category.jsp</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/Admin/components/orders.jsp</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/User/components/navBar.jsp</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/src/java/struts.xml</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/src/java/Model/TransactionforDB.java</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/Admin/components/booksAddNew.jsp</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/Admin/components/dataComponents/users.jsp</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/User/css/index.css</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/Admin/components/books.jsp</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/src/java/Model/Order.java</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/Admin/Index.jsp</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/User/css/slider.css</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/User/css/topBook.css</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/User/Index.jsp</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/Admin/components/dataComponents/transactions.jsp</file>
+        </group>
     </open-files>
 </project-private>
