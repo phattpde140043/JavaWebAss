@@ -14,19 +14,19 @@
             integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
             crossorigin="anonymous"
             />
+
         <link rel="stylesheet" href="User/css/index.css" />
-        <link rel="stylesheet" href="User/css/topBook.css" />
         <link rel="stylesheet" href="User/css/slider.css" />
-        
+        <link rel="stylesheet" href="User/css/latest.css" />
+
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     </head>
     <body>
         <!-- Nav bar -->
         <jsp:include page="./components/navBar.jsp"/>
 
-        <!-- top book -->
-        <jsp:include page="./components/topBook.jsp"/>
-
+        <div class="latest">
+        </div>
         <%
             //index default
             int i = 0;

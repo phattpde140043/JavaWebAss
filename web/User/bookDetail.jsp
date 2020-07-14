@@ -17,6 +17,8 @@
         <link rel="stylesheet" href="User/css/index.css" />
         <link rel="stylesheet" href="User/css/topBook.css" />
         <link rel="stylesheet" href="User/css/slider.css" />
+        
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     </head>
     <body>
         <!-- Nav bar -->
@@ -47,5 +49,6 @@
         ></script>
 
         <script src="User/js/hover.js"></script>
+        <script src="User/js/navBar.js"></script>
     </body>
 </html>
