@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Struct;
+package StructAdmin;
 
 import Controller.BookDBAdmin;
 import Model.Book;
@@ -34,9 +34,11 @@ public class DeleteBookAction {
 
     public String execute() throws Exception {
         try {
-            String result = this.id;
-            System.out.println("params" + result);
             String URL = FAIL;
+            boolean result = BookDBAdmin.deleteBook(this.id);
+            if (result) {
+                URL = SUCCESS;
+            }
             return URL;
         } catch (Exception e) {
             return FAIL;

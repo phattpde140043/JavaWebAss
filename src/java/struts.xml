@@ -6,9 +6,9 @@
     <!-- Configuration for the default package. -->
     <package name="default" extends="struts-default">
         <action name="">
-            <result>Admin/Login.jsp</result>
+            <result>User/Index.jsp</result>
         </action>
-        <action name="login" class="Struct.LoginAction">
+        <action name="login" class="StructAdmin.LoginAction">
             <result name="success">Admin/Index.jsp</result>
             <result name="fail">Admin/Failed.jsp</result>
         </action>
@@ -18,13 +18,44 @@
         <action name="books">
             <result>Admin/BookRoute.jsp</result>
         </action>
-        <action name="newBook" class="Struct.NewBookAction" >
+        <action name="newBook" class="StructAdmin.NewBookAction" >
             <result name="success">Admin/BookRoute.jsp</result>
             <result name="fail">Admin/Failed.jsp</result>
         </action>
-        <action name="deleteBook" class="Struct.DeleteBookAction">
+        <action name="deleteBook" class="StructAdmin.DeleteBookAction">
             <result name="success">Admin/BookRoute.jsp</result>
             <result name="fail">Admin/Failed.jsp</result>        
         </action>
+        <action name="updateBook" class="StructAdmin.UpdateBookAction">
+            <result name="success">Admin/BookRoute.jsp</result>
+            <result name="fail">Admin/Failed.jsp</result>        
+        </action>
+        
+        <action name="users">
+            <result>Admin/UserRoute.jsp</result>
+        </action>
+        <action name="newUser" class="StructAdmin.NewUserAction" >
+            <result name="success">Admin/UserRoute.jsp</result>
+            <result name="fail">Admin/Failed.jsp</result>
+        </action>
+        <action name="updateUser" class="StructAdmin.UpdateUserAction">
+            <result name="success">Admin/UserRoute.jsp</result>
+            <result name="fail">Admin/Failed.jsp</result>        
+        </action>
+        
+        
+        
+        
+        
+        <action name="category">
+            <result>User/Category.jsp</result>
+        </action>
+        <action name="latest">
+            <result>User/Latest.jsp</result>
+        </action>
+        <action name="mylist">
+            <result>User/Latest.jsp</result>
+        </action>
+
     </package>
 </struts>

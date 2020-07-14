@@ -4,13 +4,29 @@
     Author     : Admin
 --%>
 
+<%@page import="java.util.ArrayList"%>
+<%@page import="Controller.CategoryDB"%>
+<%@page import="Model.Category"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+    ArrayList<String> cats = new ArrayList<>();
+    ArrayList<Category> cat = CategoryDB.getAll();
+    for (int i = 0; i < cat.size(); i++) {
+        cats.add(cat.get(i).getCatName());
+    }
+    String[] category = cats.toArray(new String[0]);
+    session.setAttribute("category", category);
+    
+    //index default
+    int i = 0;
+    session.setAttribute("i", i);
+%>
 <nav
     class="navbar navbar-expand-lg navbar-dark bg-dark top-bar fixed-top p-0"
     id="top-bar"
     >
-    <a class="navbar-brand pl-5" href="#">
-        <img src="./img/LOGO.png" alt="" id="logo">
+    <a class="navbar-brand pl-5" href="/JavaWebAssignmentStruct2">
+        <img src="User/img/LOGO.png" alt="" id="logo">
     </a>
     <button
         class="navbar-toggler mr-5"
@@ -26,36 +42,19 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#"
+                <a class="nav-link" href="/JavaWebAssignmentStruct2"
                    >Home <span class="sr-only">(current)</span></a
                 >
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Category</a>
+                <a class="nav-link" href="category">Category</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Latest</a>
+                <a class="nav-link" href="latest">Latest</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">MyList</a>
+                <a class="nav-link" href="mylist">MyList</a>
             </li>
-            <!-- <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdownMenuLink"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Dropdown link
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li> -->
         </ul>
         <ul class="navbar-nav pr-3">
             <li class="nav-item pr-3">
@@ -117,11 +116,11 @@
                     </svg>
                 </a>
             </li>
-            <li class="nav-item pr-3">
+            <li class="nav-item pr-5">
                 <a href="#">
                     <svg
-                        width="1.5em"
-                        height="1.5em"
+                        width="1em"
+                        height="1em"
                         viewBox="0 0 16 16"
                         class="bi bi-caret-down-fill"
                         fill="currentColor"

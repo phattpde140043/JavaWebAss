@@ -5,8 +5,7 @@
   }
   
   #top-book {
-    height: 80vh;
-    justify-content: space-between;
+    height: 100vh !important;
     align-items: center;
   }
   
@@ -38,7 +37,7 @@
   
   
   .fade-out {
-    min-height: 10vh;
+    min-height: 20vh;
     background: rgb(20, 20, 20);
     background: linear-gradient(
       180deg,
@@ -49,6 +48,19 @@
       rgba(20, 20, 20, 0.9080225840336135) 83%,
       rgba(20, 20, 20, 1) 100%
     );
-  
-    margin-top: -10vh;
+    margin-top: -20vh;
+    margin-bottom: -10vh;
   }
+  
+  /*-- Media queries --*/
+@media (max-width: 992px) {
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 576px) {
+    #top-book {
+    height: 20vh;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

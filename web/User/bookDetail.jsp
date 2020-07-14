@@ -27,54 +27,6 @@
         <!-- top book -->
         <jsp:include page="./components/topBook.jsp"/>
 
-        <%
-            //index default
-            int i = 0;
-            session.setAttribute("i", i);
-        %>
-
-        <!-- slider -->
-        <jsp:include page="./components/slider.jsp"/>
-        <%
-            //index default
-            i += 1;
-            session.setAttribute("i", i);
-        %>
-        <!-- slider -->
-        <jsp:include page="./components/slider.jsp"/>
-        <%
-            //index default
-            i += 1;
-            session.setAttribute("i", i);
-        %>
-        <!-- slider -->
-        <jsp:include page="./components/slider.jsp"/>
-        <%
-            //index default
-            i += 1;
-            session.setAttribute("i", i);
-        %>
-        <!-- slider -->
-        <jsp:include page="./components/slider.jsp"/>
-        <%
-            //index default
-            i += 1;
-            session.setAttribute("i", i);
-        %>
-        <!-- slider -->
-        <jsp:include page="./components/slider.jsp"/>
-        <%
-            //index default
-            i += 1;
-            session.setAttribute("i", i);
-        %>
-        <!-- slider -->
-        <jsp:include page="./components/slider.jsp"/>
-        <%
-            //index default
-            i += 1;
-            session.setAttribute("i", i);
-        %>
 
         <!-- footer -->
         <jsp:include page="./components/footer.jsp"/>
@@ -96,7 +48,7 @@
             crossorigin="anonymous"
         ></script>
 
-        <script src="User/js/index.js"></script>
+        <script src="User/js/hover.js"></script>
         <script src="User/js/navBar.js"></script>
     </body>
 </html>

@@ -51,23 +51,23 @@ public class UserDB {
         }
     }
 
-    public static String addNewUser(String uID, String uEmail, String uPassword, String uName, String uPhone, String uAddress) {
+    public static boolean addNewUser(User s) {
         try {
             Class.forName(driverName);
             Connection con = DriverManager.getConnection(dbURL, userDB, passDB);
-            PreparedStatement stmt = con.prepareStatement("Insert Into Users(uID, uEmail, uPassword, uName, uPhone, uAddress) Values(?,?,?,?,?,?) ");
-            stmt.setString(1, uID);
-            stmt.setString(2, uEmail);
-            stmt.setString(3, uPassword);
-            stmt.setString(4, uName);
-            stmt.setString(5, uPhone);
-            stmt.setString(6, uAddress);
+            PreparedStatement stmt = con.prepareStatement("Insert Into Users(uEmail, uPassword, uName, uPhone, uAddress) Values(?,?,?,?,?) ");
+            stmt.setString(1, s.getuEmail());
+            stmt.setString(2, s.getuPassword());
+            stmt.setString(3, s.getuName());
+            stmt.setString(4, s.getuPhone());
+            stmt.setString(5, s.getuAddress());
             stmt.execute();
             con.close();
+            return true;
         } catch (Exception ex) {
             Logger.getLogger(UserDB.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
         }
-        return null;
     }
 
     public static boolean updateUser(User s) {
@@ -85,7 +85,7 @@ public class UserDB {
             int rc = stmt.executeUpdate();
             //if(rc==1) con.commit(); else con.rollback();
             con.close();
-            return rc == 1;
+            return true;
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -166,8 +166,8 @@ public class UserDB {
 //        System.out.println("=   =   =   =   =   =   =   =   =   =       =   =   =   =   =   =   ==");
 //        
 //        
-//        User s = new User("U0006", "aaaa@xxxxx.x", "acdd", "ssd", "1425555", "Ha Noi");
-//        UserDB.updateUser(s);
+        User s = new User("U0014", "aaaa@xxxxx.x", "acdd", "ssd", "1425555", "Ha Noi");
+        System.out.println("update : " + UserDB.updateUser(s));
 //        
 //        
 //        System.out.println("=   =   =   =   =   =   =   =   =   =       =   =   =   =   =   =   ==");

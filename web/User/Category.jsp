@@ -17,64 +17,22 @@
         <link rel="stylesheet" href="User/css/index.css" />
         <link rel="stylesheet" href="User/css/topBook.css" />
         <link rel="stylesheet" href="User/css/slider.css" />
+        <link rel="stylesheet" href="User/css/navBarCate.css" />
         
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     </head>
     <body>
         <!-- Nav bar -->
-        <jsp:include page="./components/navBar.jsp"/>
+        <jsp:include page="./components/navBarCate.jsp"/>
 
         <!-- top book -->
         <jsp:include page="./components/topBook.jsp"/>
 
-        <%
-            //index default
-            int i = 0;
-            session.setAttribute("i", i);
-        %>
+            <!-- slider -->
+            <jsp:include page="./components/slider.jsp"/>
+            <!-- slider -->
+            <jsp:include page="./components/slider.jsp"/>
 
-        <!-- slider -->
-        <jsp:include page="./components/slider.jsp"/>
-        <%
-            //index default
-            i += 1;
-            session.setAttribute("i", i);
-        %>
-        <!-- slider -->
-        <jsp:include page="./components/slider.jsp"/>
-        <%
-            //index default
-            i += 1;
-            session.setAttribute("i", i);
-        %>
-        <!-- slider -->
-        <jsp:include page="./components/slider.jsp"/>
-        <%
-            //index default
-            i += 1;
-            session.setAttribute("i", i);
-        %>
-        <!-- slider -->
-        <jsp:include page="./components/slider.jsp"/>
-        <%
-            //index default
-            i += 1;
-            session.setAttribute("i", i);
-        %>
-        <!-- slider -->
-        <jsp:include page="./components/slider.jsp"/>
-        <%
-            //index default
-            i += 1;
-            session.setAttribute("i", i);
-        %>
-        <!-- slider -->
-        <jsp:include page="./components/slider.jsp"/>
-        <%
-            //index default
-            i += 1;
-            session.setAttribute("i", i);
-        %>
 
         <!-- footer -->
         <jsp:include page="./components/footer.jsp"/>
@@ -95,8 +53,7 @@
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"
         ></script>
-
         <script src="User/js/index.js"></script>
-        <script src="User/js/navBar.js"></script>
+        <script src="User/js/navBarCate.js"></script>
     </body>
 </html>

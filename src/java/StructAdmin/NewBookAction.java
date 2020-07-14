@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Struct;
+package StructAdmin;
 
 import Controller.BookDBAdmin;
 import Model.Book;
@@ -91,8 +91,6 @@ public class NewBookAction {
         try {
             Book b = new Book(title, category, price, quantity, author, description, cover);
             boolean result = BookDBAdmin.addNewBook(b);
-            System.out.println(result);
-            System.out.println("new book : " + b.toString());
             String URL = FAIL;
             if (result) {
                 Map session = ActionContext.getContext().getSession();

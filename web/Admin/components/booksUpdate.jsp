@@ -4,15 +4,34 @@
     Author     : Admin
 --%>
 
+<%@page import="Controller.BookDB"%>
+<%@page import="Model.Book"%>
 <%@page import="Controller.CategoryDB"%>
 <%@page import="java.util.List"%>
 <%@page import="Model.Category"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <div class="container-fluid content d-flex">
     <!-- Page Heading -->
+    <%
+        String id = request.getParameter("id");
+        Book b = BookDB.getById(id);
+        Category cat = CategoryDB.getById(b.getCatId());
+        String cate = cat.getCatName();
+    %>
     <div class="">
-        <h1 class="h3 mb-2 text-gray-800">New Books</h1>
-        <form method="POST" action="newBook">
+        <h1 class="h3 mb-2 text-gray-800">Update Books</h1>
+
+        <form method="POST" action="updateBook">
+
+            <div class="input-group mb-3 col-xl-12 p-0">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1" >ID</span>
+                </div>
+
+                <!--Title book here !!!-->
+
+                <input value="<%=b.getbId()%>" readonly name="id" type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
 
             <div class="input-group mb-3 col-xl-12 p-0">
                 <div class="input-group-prepend">
@@ -21,7 +40,7 @@
 
                 <!--Title book here !!!-->
 
-                <input name="title" type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+                <input value="<%=b.getbName()%>" name="title" type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
             </div>
 
             <div class="input-group mb-3 col-xl-12 p-0">
@@ -31,7 +50,7 @@
 
                 <!--Author book here !!!-->
 
-                <input name="author" type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+                <input value="<%=b.getbAuthor()%>" name="author" type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
             </div>
 
             <div class="input-group mb-3 col-xl-12 p-0">
@@ -42,7 +61,7 @@
                 <!--Category book here !!!-->
 
                 <select name="category" class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
+                    <option value="<%=b.getCatId()%>" selected><%=cate%></option>
                     <%
                         List<Category> cl = CategoryDB.getAll();
                     %>
@@ -52,34 +71,37 @@
                 </select>
             </div>
 
-            <div class="input-group mb-3 col-xl-6 col-lg-6 p-0">
+            <div class="input-group mb-3 col-xl-12 col-lg-12 p-0">
                 <div class="input-group-prepend">
                     <span class="input-group-text">$</span>
                 </div>
 
                 <!--Price book here !!!-->
 
-                <input name="price" type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <input value="<%=b.getbPrice()%>" name="price" type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
                 <div class="input-group-append">
                     <span class="input-group-text">.00</span>
                 </div>
             </div>
 
-            <div class="input-group mb-3 col-xl-6 p-0">
+            <div class="input-group mb-3 col-xl-12 col-lg-12 p-0">
                 <div class="input-group-prepend">
                     <span class="input-group-text">Quantity</span>
                 </div>
 
                 <!--Quantity book here !!!-->
 
-                <input name="quantity" type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <input value="<%=b.getbQuantity()%>" name="quantity" type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
             </div>
 
             <div class="input-group mb-3 col-xl-12 p-0">
                 <div class="input-group-prepend">
                     <span class="input-group-text">Description</span>
                 </div>
-                <textarea name="description" class="form-control" aria-label="With textarea"></textarea>
+
+                <!--Description here !!!-->
+
+                <textarea name="description" class="form-control" aria-label="With textarea"><%=b.getbDes()%></textarea>
             </div>
 
             <div class="input-group mb-3 col-xl-12 p-0">
@@ -97,7 +119,7 @@
 
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary w-50" data-toggle="modal" data-target="#exampleModal">
-                Add
+                Update
             </button>
 
             <!-- Modal -->
@@ -118,7 +140,7 @@
 
                             <!--Submit button !!!-->
 
-                            <button type="submit" class="btn btn-success">Add</button>
+                            <button type="submit" class="btn btn-success">Update</button>
                         </div>
                     </div>
                 </div>
@@ -128,6 +150,6 @@
 
     </div>
     <div  class="col-xl-6 p-0 d-flex justify-content-start align-items-start">
-        <img class="w-100 px-5" src="Admin/images/undraw_mathematics_4otb.svg" alt=""adding>
+        <img class="w-100 pt-5 px-5 ml-5" src="Admin/images/undraw_throw_away_ldjd.svg" alt=""adding>
     </div>
 </div>
