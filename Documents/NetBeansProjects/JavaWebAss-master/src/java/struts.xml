@@ -1,0 +1,31 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        <action name="">
+            <result>Admin/Login.jsp</result>
+        </action>
+        <action name="dangnhap" class="Struct.LoginAction">
+            <result name="admin">Admin/Index.jsp</result>
+            <result name="user">User/User_Index.jsp</result>
+            <result name="fail">Admin/Failed.jsp</result>
+        </action>
+        <action name="login">
+            <result>Admin/Index.jsp</result>
+        </action>
+        <action name="books">
+            <result>Admin/BookRoute.jsp</result>
+        </action>
+        <action name="newBook" class="Struct.NewBookAction" >
+            <result name="success">Admin/BookRoute.jsp</result>
+            <result name="fail">Admin/Failed.jsp</result>
+        </action>
+        <action name="deleteBook" class="Struct.DeleteBookAction">
+            <result name="success">Admin/BookRoute.jsp</result>
+            <result name="fail">Admin/Failed.jsp</result>        
+        </action>
+    </package>
+</struts>
