@@ -26,6 +26,7 @@ public class NewBookAction {
     private String cover = "";
 
     private final String SUCCESS = "success";
+    private final String FAIL = "fail";
 
     public String getTitle() {
         return title;
@@ -82,7 +83,6 @@ public class NewBookAction {
     public void setCover(String cover) {
         this.cover = cover;
     }
-    private final String FAIL = "fail";
 
     public NewBookAction() {
     }

@@ -7,15 +7,16 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <link rel="stylesheet" href="User/css/slider.css" />
-<div class="slider">
+<div class="slider container p-0">
     <%
         int min = 50;
         int max = 100;
         double random_double = Math.random() * (max - min + 1) + min;
         String[] category = (String[]) session.getAttribute("category");
         int i = (Integer) session.getAttribute("i");
+        
     %>
-    <div class="container p-0 m-0 ">
+    <div class="p-0 m-0">
         <!-- slider real -->
         <div id="carouselExampleIndicators<%=random_double%>" class="carousel slide p-5" data-ride="carousel" data-pause="hover" data-interval="500000">
             <h2 class="pb-3 category"><%=category[i]%></h2>

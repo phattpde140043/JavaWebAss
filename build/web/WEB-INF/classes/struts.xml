@@ -6,7 +6,7 @@
     <!-- Configuration for the default package. -->
     <package name="default" extends="struts-default">
         <action name="">
-            <result>User/Index.jsp</result>
+            <result>User/Login.jsp</result>
         </action>
         <action name="login" class="StructAdmin.LoginAction">
             <result name="success">Admin/Index.jsp</result>
