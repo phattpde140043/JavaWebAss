@@ -9,7 +9,6 @@ import Controller.UserDB;
 import com.opensymphony.xwork2.ActionContext;
 import java.util.Map;
 
-
 /**
  *
  * @author tran phu phat
@@ -41,19 +40,29 @@ public class LoginAction {
     }
 
     public String execute() throws Exception {
-        try{
-        UserDB uDB = new UserDB();
-        String result = uDB.LogIn(email,password);
-        String URL = FAIL;
-        if (result!=null) {
-            Map session = ActionContext.getContext().getSession();
-            session.put("ID", result);
-            URL = SUCCESS;
+        try {
+            UserDB uDB = new UserDB();
+            String result = uDB.LogIn(email, password);
+            String URL = FAIL;
+            if (result != null) {
+                Map session = ActionContext.getContext().getSession();
+                session.put("ID", result);
+                if (UserDB.getUserById(result).getuRole() == 1) {
+                    URL = "admin";
+                } else {
+                    URL = "user";
+                }
+            }
+            return URL;
+        } catch (Exception e) {
+            return FAIL;
         }
-        return URL;
-        }catch(Exception e){
-        return FAIL;
-        }
+    }
+
+    public String logout() throws Exception {
+        Map session = ActionContext.getContext().getSession();
+        session.clear();
+        return "success";
     }
 
 }

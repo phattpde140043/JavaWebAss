@@ -78,7 +78,7 @@ public class TransactionDB implements DatabaseInfo {
             PreparedStatement stmt = con.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
-                System.out.println(rs.getString(2));
+                
                 result.add(new TransactionforDB(rs.getString(1), rs.getString(2), rs.getString(3), rs.getInt(4), rs.getBoolean(5), rs.getDate(6)));
             }
             con.close();
@@ -118,6 +118,9 @@ public class TransactionDB implements DatabaseInfo {
                 result.add(temp);
             }
 
+        }
+        for(Transaction r : result){
+        r.setTotal();
         }
         //System.out.println(result.size()+"after");
         return result;
@@ -168,6 +171,7 @@ public class TransactionDB implements DatabaseInfo {
             ArrayList<Transaction> ls = getBytID(tID);
             //if(ls.isEmpty())System.out.println("null  2 "+tID);
             for (Transaction temp : ls) {
+                System.out.println("1"+ temp.gettID());
                 result.add(temp);
             }
         }
@@ -295,7 +299,7 @@ public class TransactionDB implements DatabaseInfo {
         TransactionDB db = new TransactionDB();
         ArrayList<Transaction>  ls = db.getAll();
         for (Transaction l : ls) {
-            System.out.println(l);
+            System.out.println(l.getTotal());
         }
     }
 }

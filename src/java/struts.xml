@@ -6,11 +6,18 @@
     <!-- Configuration for the default package. -->
     <package name="default" extends="struts-default">
         <action name="">
+            <result>Admin/Login.jsp</result>
+        </action>
+        <action name="Home">
             <result>User/Index.jsp</result>
         </action>
-        <action name="login" class="StructAdmin.LoginAction">
-            <result name="success">Admin/Index.jsp</result>
-            <result name="fail">Admin/Failed.jsp</result>
+        <action name="dangnhap" class="StructAdmin.LoginAction">
+            <result name="admin">Admin/Index.jsp</result>
+            <result name="user">User/Index.jsp</result>
+            <result name="fail">Failed.jsp</result>
+        </action>
+        <action name="login">
+            <result>Admin/Index.jsp</result>
         </action>
         <action name="search">
             <result>Admin/Search.jsp</result>
@@ -42,7 +49,9 @@
             <result name="success">Admin/UserRoute.jsp</result>
             <result name="fail">Admin/Failed.jsp</result>        
         </action>
-        
+        <action name="logout" class="StructAdmin.LoginAction" method="logout"> 
+            <result name="success" type ="redirect">''</result>
+        </action>
         
         
         

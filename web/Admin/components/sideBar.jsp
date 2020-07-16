@@ -35,10 +35,7 @@
                 <li class="nav-item">
                     <a class="nav-link text-white-50" href="login?value=orders">Order</a>
                 </li>
-                <!--demo(Xem xong thì cứ xóa)-->
-                <li class="nav-item">
-                    <a class="nav-link text-white-50" href="Admin/Search.jsp">Search</a>
-                </li>
+                
 
             </ul>
         </div>
