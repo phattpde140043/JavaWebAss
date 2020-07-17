@@ -10,12 +10,17 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
     ArrayList<String> cats = new ArrayList<>();
+    ArrayList<String> catIDs = new ArrayList<>();
     ArrayList<Category> cat = CategoryDB.getAll();
     for (int i = 0; i < cat.size(); i++) {
         cats.add(cat.get(i).getCatName());
+        catIDs.add(cat.get(i).getCatID());
     }
     String[] category = cats.toArray(new String[0]);
     session.setAttribute("category", category);
+    
+    String[] categoryID = catIDs.toArray(new String[0]);
+    session.setAttribute("categoryID", categoryID);
 
     //index default
     int i = 0;

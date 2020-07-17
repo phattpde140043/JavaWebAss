@@ -68,6 +68,7 @@
   position: relative;
   width: 180px;
   height: 270px;
+  background-color: rgba(0, 0, 0, 1);
 }
 
 .slider .carousel-inner .carousel-item .overlay {
@@ -119,14 +120,13 @@
   position: absolute;
   width: 100% !important;
   left: 0;
-  top: 10px;
+  top: 40%;
   text-align: center;
   opacity: 0;
   transition: opacity 0.35s ease;
 }
 
 .button a {
-  width: 200px;
   padding: 12px 48px;
   text-align: center;
   color: white;

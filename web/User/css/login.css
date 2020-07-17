@@ -52,9 +52,10 @@ input {
 
 .label-inside {
     position: absolute;
-    left: 5%;
-    top: 2%;
+    left: 6%;
+    top: 5%;
     font-size: .7rem;
+    color: rgba(0, 0, 0, 0.9);
 }
 
 #exampleCheck1 {
@@ -78,8 +79,7 @@ input {
 
 button {
     height: 3rem;
-    background: rgb(189,25,238);
-    background: linear-gradient(180deg, rgba(189,25,238,1) 0%, rgba(82,50,238,1) 100%);
+    background: #AD1BE9;
     border: none !important;
     color: white;
 }
@@ -87,6 +87,7 @@ button {
 .sub-img {
     padding: 4rem;
     padding-bottom: 1rem;
+    padding-top: 2rem !important;
 }
 
 .divider {
@@ -103,6 +104,15 @@ ul li {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+.sign-in {
+    margin-top: 3rem;
+    font-size: 1rem;
+}
+
+.sign-in a{
+    color: #fff !important;
 }
 
 /*-- Media queries --*/

@@ -101,7 +101,9 @@ public class CategoryDB implements DatabaseInfo {
         ArrayList<Category> cat1,cat2 = new ArrayList<>();
         cat = CategoryDB.getById("C005");
         cat1=CategoryDB.getAll();
-        cat2 = CategoryDB.getByName("fairy");
-        System.out.println(cat.getCatName());
+        cat2 = CategoryDB.getByName("Action and Adventure");
+        for (Category category : cat2) {
+            System.out.println(category.getCatID());
+        }
     }
 }

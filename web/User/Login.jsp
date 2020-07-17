@@ -23,7 +23,7 @@
         <div class="wrapper">
             <div class="header">
                 <nav class="navbar navbar-light bg-transparent">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand ml-3" href="#">
                         <img src="User/img/LOGO.png" alt="logo" loading="lazy" id="logo">
                     </a>
                 </nav>
@@ -35,7 +35,7 @@
 
                     <!--Form login here !!!-->
 
-                    <form class="needs-validation" novalidate>
+                    <form class="needs-validation" novalidate action="">
                         <div class="form-group">
                             <label class="label-inside" for="exampleInputEmail1">Email address</label>
                             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
@@ -58,6 +58,12 @@
                             <a href="#">Need help?</a>
                         </div>
                     </form>
+                    
+                    <div class="sign-in">
+                        New to Nerd? 
+                        <a href="#">Sign up now</a>
+                    </div>
+                    
                     <div class="d-flex justify-content-center sub-img">
                         <img src="User/img/gift.svg"  alt="logo" loading="lazy" id="logo">
                     </div>
