@@ -8,7 +8,7 @@
 <%@page import="Controller.CategoryDB"%>
 <%@page import="Model.Category"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<jsp:include page="./cart.jsp"/>
+<jsp:include page="./preLoadNavBar.jsp"/>
 <%
     List<Category> cl = CategoryDB.getAll();
 

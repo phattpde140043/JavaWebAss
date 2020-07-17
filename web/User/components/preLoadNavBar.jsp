@@ -4,6 +4,7 @@
     Author     : Admin
 --%>
 
+<%@page import="Model.Order"%>
 <%@page import="Controller.CategoryDB"%>
 <%@page import="Model.Category"%>
 <%@page import="java.util.ArrayList"%>
@@ -28,7 +29,8 @@
     int i = 0;
     session.setAttribute("i", i);
 %>
+<%! ArrayList<Order> orderList = new ArrayList<Order>(); %>
 <%
-     
+    pageContext.setAttribute("orderList", orderList);
 %>
 <div></div>

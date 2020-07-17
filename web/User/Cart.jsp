@@ -1,3 +1,8 @@
+<%@page import="Controller.BookDB"%>
+<%@page import="Model.Book"%>
+<%@page import="Model.Order"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.ArrayList"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -14,42 +19,53 @@
             integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
             crossorigin="anonymous"
             />
+
         <link rel="stylesheet" href="User/css/index.css" />
-        <link rel="stylesheet" href="User/css/topBook.css" />
         <link rel="stylesheet" href="User/css/slider.css" />
+        <link rel="stylesheet" href="User/css/latest.css" />
 
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     </head>
     <body>
-        <%! ArrayList<Order> orderList = new ArrayList<Order>(); %>
-<%
-    pageContext.setAttribute("orderList", orderList);
-%>
+
+        <%! ArrayList<Order> orderList = new ArrayList<Order>();%>
+        <%
+            pageContext.setAttribute("orderList", orderList);
+            Book b = BookDB.getById(request.getParameter("bid"));
+            Order o = new Order(request.getParameter("bid"), 1);
+        %>
         <!-- Nav bar -->
         <jsp:include page="./components/navBar.jsp"/>
 
-        <!-- top book -->
-        <jsp:include page="./components/topBook.jsp"/>
+        <div class="latest">
+        </div>
 
+        <div class="container cart">
+            <h1>Cart</h1>
+            <div class="content">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Product</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="<%=b.getbCover()%>" width="64px"></td>
+                            <td><%=b.getbName()%></td>
+                            <td>$<%=b.getbPrice()%></td>
+                            <td>1</td>
+                            <td>$<%=b.getbPrice()%></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
-        <%
-            //index default
-            int i = 0;
-            session.setAttribute("i", i);
-            String[] category = (String[]) session.getAttribute("category");
-        %>
-        
-        <% for (int j = 0; j < category.length; j++) {%>
-        <!-- slider -->
-        <jsp:include page="./components/slider.jsp"/>
-        <%            //index default
-            i += 1;
-            session.setAttribute("i", i);
-        %>
-        <% }%>
-
-        
-        
 
         <!-- footer -->
         <jsp:include page="./components/footer.jsp"/>

@@ -26,7 +26,7 @@
                 id="userDataTable"
                 class="display table table-striped table-bordered"
                 width="100%"
-                >
+                > 
                 <thead>
                     <tr>
                         <th>ID</th>
