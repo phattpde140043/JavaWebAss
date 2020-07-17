@@ -96,15 +96,16 @@ public class UserDB {
         User s = null;
         try (Connection con = DriverManager.getConnection(dbURL, userDB, passDB)) {
             Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("Select uEmail,uPassword,uName,uPhone,uAddress from Users where uID='" + uID + "'");
+            ResultSet rs = stmt.executeQuery("Select uEmail,uPassword,uName,uPhone,uAddress,uRole from Users where uID='" + uID + "'");
             if (rs.next()) {
                 String uEmail = rs.getString(1);
                 String uPassword = rs.getString(2);
                 String uName = rs.getString(3);
                 String uPhone = rs.getString(4);
                 String uAddress = rs.getString(5);
+                int uRole = rs.getInt(6);
                 String userID = uID;
-                s = new User(userID, uEmail, uPassword, uName, uPhone, uAddress);
+                s = new User(userID, uEmail, uPassword, uName, uPhone, uAddress,uRole);
             }
             con.close();
             return s;
@@ -118,15 +119,16 @@ public class UserDB {
         User s = null;
         try (Connection con = DriverManager.getConnection(dbURL, userDB, passDB)) {
             Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("Select uID,uEmail,uPassword,uPhone,uAddress from Users where uName='" + uName + "'");
+            ResultSet rs = stmt.executeQuery("Select uID,uEmail,uPassword,uPhone,uAddress, uRole from Users where uName='" + uName + "'");
             if (rs.next()) {
                 String uID = rs.getString(1);
                 String uEmail = rs.getString(2);
                 String uPassword = rs.getString(3);
                 String uPhone = rs.getString(4);
                 String uAddress = rs.getString(5);
+                int uRole = rs.getInt(6);
                 String userName = uName;
-                s = new User(uID, uEmail, uPassword, userName, uPhone, uAddress);
+                s = new User(uID, uEmail, uPassword, userName, uPhone, uAddress, uRole);
             }
             con.close();
             return s;
@@ -137,7 +139,6 @@ public class UserDB {
     }
 
     public static String LogIn(String email, String password) {
-        /*
         try {
             Class.forName(driverName);
             Connection con = DriverManager.getConnection(dbURL, userDB, passDB);
@@ -155,8 +156,6 @@ public class UserDB {
             System.out.println(ex);
         }
         return null;
-         */
-        return "success";
     }
 
     public static void main(String[] args) {

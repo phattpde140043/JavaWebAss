@@ -10,14 +10,26 @@ package Model;
  * @author ASUS
  */
 public class User {
+
     private String uID;
     private String uEmail;
     private String uPassword;
     private String uName;
     private String uPhone;
     private String uAddress;
+    private int uRole;// 0 is user 1 is admin
 
     public User() {
+    }
+
+    public User(String uID, String uEmail, String uPassword, String uName, String uPhone, String uAddress, int uRole) {
+        this.uID = uID;
+        this.uEmail = uEmail;
+        this.uPassword = uPassword;
+        this.uName = uName;
+        this.uPhone = uPhone;
+        this.uAddress = uAddress;
+        this.uRole = uRole;
     }
 
     public User(String uEmail, String uPassword, String uName, String uPhone, String uAddress) {
@@ -28,8 +40,6 @@ public class User {
         this.uAddress = uAddress;
     }
 
-    
-    
     public User(String uID, String uEmail, String uPassword, String uName, String uPhone, String uAddress) {
         this.uID = uID;
         this.uEmail = uEmail;
@@ -41,6 +51,14 @@ public class User {
 
     public String getuID() {
         return uID;
+    }
+
+    public int getuRole() {
+        return uRole;
+    }
+
+    public void setuRole(int uRole) {
+        this.uRole = uRole;
     }
 
     public void setuID(String uID) {
@@ -89,7 +107,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "[" + "'" + uAddress + "'" + ", "  + "'" + uID  + "'" + ", "  + "'" + uEmail  + "'" + ", "  + "'" + uPassword + "'" + ", "  + "'" + uName  + "'" + ", "  + "'" + uPhone  + "'" + ']';
+        return "[" + "'" + uAddress + "'" + ", " + "'" + uID + "'" + ", " + "'" + uEmail + "'" + ", " + "'" + uPassword + "'" + ", " + "'" + uName + "'" + ", " + "'" + uPhone + "'" + ']';
     }
-    
+
 }

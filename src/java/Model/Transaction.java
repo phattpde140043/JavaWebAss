@@ -21,7 +21,7 @@ public class Transaction {
     private List<Order> Cart= new ArrayList<>() ;
     private boolean Status;
     private Date tDate;
-    private Double Total;
+    private Double Total=0.0;
 
     public Transaction(String tID, String uID, boolean Status, Date tDate) {
         this.tID = tID;
@@ -51,10 +51,11 @@ public class Transaction {
         return Total;
     }
 
-    private void setTotal() {
+    public void setTotal() {
         for (Order order : Cart) {
             this.Total+=(order.getBook().getbPrice()*order.gettQuatity()); 
         }
+        
     }
 
     
@@ -65,6 +66,7 @@ public class Transaction {
 
     public void setCart(List<Order> Cart) {
         this.Cart = Cart;
+        
     }
 
     public boolean isStatus() {

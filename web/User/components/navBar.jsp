@@ -30,7 +30,7 @@
     class="navbar navbar-expand-lg navbar-dark bg-dark top-bar fixed-top p-0"
     id="top-bar"
     >
-    <a class="navbar-brand pl-5" href="/JavaWebAssignmentStruct2">
+    <a class="navbar-brand pl-5" href="Home">
         <img src="User/img/LOGO.png" alt="" id="logo">
     </a>
     <button
@@ -47,7 +47,7 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="/JavaWebAssignmentStruct2"
+                <a class="nav-link" href="Home"
                    >Home <span class="sr-only">(current)</span></a
                 >
             </li>

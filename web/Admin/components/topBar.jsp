@@ -4,7 +4,10 @@
     Author     : Admin
 --%>
 
+<%@page import="Controller.UserDB"%>
+<%@page import="Model.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="s" uri="/struts-tags" %>
 <nav class="topBar shadowed d-flex justify-content-center">
     <!-- search bar -->
     <form
@@ -146,7 +149,11 @@
                 aria-expanded="false"
                 >
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"
-                      >Valerie Luna</span
+                      <%
+                          String id = (String) session.getAttribute("ID");
+                          String s = UserDB.getUserById(id).getuName();
+                      %>
+                      ><%=s%></span
                 >
                 <img
                     class="img-profile rounded-circle w-25"
@@ -158,7 +165,7 @@
                 class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                 aria-labelledby="userDropdown"
                 >
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="users?value=update&id=<%=id%>">
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                     Profile
                 </a>
@@ -173,9 +180,7 @@
                 <div class="dropdown-divider"></div>
                 <a
                     class="dropdown-item"
-                    href="#"
-                    data-toggle="modal"
-                    data-target="#logoutModal"
+                    href="logout"
                     >
                     <i
                         class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"
