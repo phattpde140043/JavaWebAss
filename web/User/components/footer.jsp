@@ -9,8 +9,8 @@
     <div class="container" style="height: 10vh;">
         <div class="social-btn"></div>
         <div class="service"></div>
-        <div class="nocopy row">
-            <h5>© 2020 FiveCooks team. Ltd. All Rights Reserved</h5>
+        <div class="member-footer-copyright">
+            <span>© 1997-2020 FiveCooks, Inc.</span>
         </div>
     </div>
 </footer>

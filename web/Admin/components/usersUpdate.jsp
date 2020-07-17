@@ -35,7 +35,7 @@
 
                 <!--email users here !!!-->
 
-                <input name="email" value="<%=s.getuEmail()%>" type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+                <input readonly name="email" value="<%=s.getuEmail()%>" type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
             </div>
 
             <div class="input-group mb-3 col-xl-12 p-0">
@@ -45,7 +45,7 @@
 
                 <!--Pasword users here !!!-->
 
-                <input name="password" value="<%=s.getuPassword()%>" type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+                <input readonly name="password" value="<%=s.getuPassword()%>" type="password" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
             </div>
 
             <div class="input-group mb-3 col-xl-12 p-0">
@@ -55,7 +55,7 @@
 
                 <!--Name users here !!!-->
 
-                <input name="name" value="<%=s.getuName()%>" type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+                <input readonly name="name" value="<%=s.getuName()%>" type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
             </div>
 
             <div class="input-group mb-3 col-xl-12 p-0">
@@ -65,7 +65,7 @@
 
                 <!--Phone Number users here !!!-->
 
-                <input name="phone" value="<%=s.getuPhone()%>" type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+                <input readonly name="phone" value="<%=s.getuPhone()%>" type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
             </div>
 
             <div class="input-group mb-3 col-xl-12 p-0">
@@ -75,7 +75,7 @@
 
                 <!--Address users here !!!-->
 
-                <input name="address" value="<%=s.getuAddress()%>" type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+                <input readonly name="address" value="<%=s.getuAddress()%>" type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
             </div>
 
 

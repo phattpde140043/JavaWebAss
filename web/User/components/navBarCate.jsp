@@ -3,10 +3,12 @@
     Created on : Jul 12, 2020, 7:36:18 PM
     Author     : Admin
 --%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
 <%@page import="Controller.CategoryDB"%>
 <%@page import="Model.Category"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<jsp:include page="./cart.jsp"/>
 <%
     List<Category> cl = CategoryDB.getAll();
 
@@ -52,18 +54,10 @@
         </div>
       </li> -->
             </ul>
-            <ul class="navbar-nav pr-3">
+            <ul class="navbar-nav pr-3" style="position: relative">
                 <li class="nav-item pr-3">
-                    <a href="#">
-                        <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-search"
-                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                  d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
-                            <path fill-rule="evenodd"
-                                  d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
-                        </svg>
-                    </a>
-                </li>
+                <form><input><div class="div1"></div></input></form>
+            </li>
                 <li class="nav-item pr-3">
                     <a href="#">
                         <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-bag" fill="currentColor"
@@ -112,8 +106,8 @@
 
                 <div class="dropdown-menu w-100" aria-labelledby="dropdownMenuLink">
                     <ul class="table-cate row p-0 m-0">
-                        <% for (int i = 0; i < cl.size(); i++) {%>
-                        <a class="col-lg-4 m-0 cate" href="/JavaWebAssignmentStruct2/category?value=<%=cl.get(i).getCatID()%>"><li class=""><%=cl.get(i).getCatName()%></li></a>
+                        <% for (int j = 0; j < cl.size(); j++) {%>
+                        <a class="col-lg-4 m-0 cate" href="/JavaWebAssignmentStruct2/category?value=<%=cl.get(j).getCatID()%>"><li class=""><%=cl.get(j).getCatName()%></li></a>
                                 <% }%>
                     </ul>
                 </div>

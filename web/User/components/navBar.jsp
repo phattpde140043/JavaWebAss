@@ -10,13 +10,18 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
     ArrayList<String> cats = new ArrayList<>();
+    ArrayList<String> catIDs = new ArrayList<>();
     ArrayList<Category> cat = CategoryDB.getAll();
     for (int i = 0; i < cat.size(); i++) {
         cats.add(cat.get(i).getCatName());
+        catIDs.add(cat.get(i).getCatID());
     }
     String[] category = cats.toArray(new String[0]);
     session.setAttribute("category", category);
     
+    String[] categoryID = catIDs.toArray(new String[0]);
+    session.setAttribute("categoryID", categoryID);
+
     //index default
     int i = 0;
     session.setAttribute("i", i);
@@ -56,30 +61,12 @@
                 <a class="nav-link" href="mylist">MyList</a>
             </li>
         </ul>
-        <ul class="navbar-nav pr-3">
+        <ul class="navbar-nav pr-3" style="position: relative">
             <li class="nav-item pr-3">
-                <a href="#">
-                    <svg
-                        width="1.5em"
-                        height="1.5em"
-                        viewBox="0 0 16 16"
-                        class="bi bi-search"
-                        fill="currentColor"
-                        xmlns="http://www.w3.org/2000/svg"
-                        >
-                        <path
-                            fill-rule="evenodd"
-                            d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"
-                            />
-                        <path
-                            fill-rule="evenodd"
-                            d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"
-                            />
-                    </svg>
-                </a>
+                <form><input><div class="div1"></div></input></form>
             </li>
             <li class="nav-item pr-3">
-                <a href="#">
+                <a href="cart">
                     <svg
                         width="1.5em"
                         height="1.5em"
