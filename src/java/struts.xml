@@ -65,6 +65,9 @@
         <action name="mylist">
             <result>User/Latest.jsp</result>
         </action>
+        <action name="cart">
+            <result>User/Cart.jsp</result>
+        </action>
 
     </package>
 </struts>
