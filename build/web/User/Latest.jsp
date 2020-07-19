@@ -14,9 +14,10 @@
             integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
             crossorigin="anonymous"
             />
+
         <link rel="stylesheet" href="User/css/index.css" />
-        <link rel="stylesheet" href="User/css/topBook.css" />
         <link rel="stylesheet" href="User/css/slider.css" />
+        <link rel="stylesheet" href="User/css/latest.css" />
 
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     </head>
@@ -24,28 +25,56 @@
         <!-- Nav bar -->
         <jsp:include page="./components/navBar.jsp"/>
 
-        <!-- top book -->
-        <jsp:include page="./components/topBook.jsp"/>
-
-
+        <div class="latest">
+        </div>
         <%
             //index default
             int i = 0;
             session.setAttribute("i", i);
-            String[] category = (String[]) session.getAttribute("category");
         %>
-        
-        <% for (int j = 0; j < category.length; j++) {%>
+
         <!-- slider -->
         <jsp:include page="./components/slider.jsp"/>
-        <%            //index default
+        <%
+            //index default
             i += 1;
             session.setAttribute("i", i);
         %>
-        <% }%>
-
-        
-        
+        <!-- slider -->
+        <jsp:include page="./components/slider.jsp"/>
+        <%
+            //index default
+            i += 1;
+            session.setAttribute("i", i);
+        %>
+        <!-- slider -->
+        <jsp:include page="./components/slider.jsp"/>
+        <%
+            //index default
+            i += 1;
+            session.setAttribute("i", i);
+        %>
+        <!-- slider -->
+        <jsp:include page="./components/slider.jsp"/>
+        <%
+            //index default
+            i += 1;
+            session.setAttribute("i", i);
+        %>
+        <!-- slider -->
+        <jsp:include page="./components/slider.jsp"/>
+        <%
+            //index default
+            i += 1;
+            session.setAttribute("i", i);
+        %>
+        <!-- slider -->
+        <jsp:include page="./components/slider.jsp"/>
+        <%
+            //index default
+            i += 1;
+            session.setAttribute("i", i);
+        %>
 
         <!-- footer -->
         <jsp:include page="./components/footer.jsp"/>

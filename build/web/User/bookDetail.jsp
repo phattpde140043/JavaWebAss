@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="User/css/index.css" />
         <link rel="stylesheet" href="User/css/topBook.css" />
         <link rel="stylesheet" href="User/css/slider.css" />
-
+        
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     </head>
     <body>
@@ -27,25 +27,6 @@
         <!-- top book -->
         <jsp:include page="./components/topBook.jsp"/>
 
-
-        <%
-            //index default
-            int i = 0;
-            session.setAttribute("i", i);
-            String[] category = (String[]) session.getAttribute("category");
-        %>
-        
-        <% for (int j = 0; j < category.length; j++) {%>
-        <!-- slider -->
-        <jsp:include page="./components/slider.jsp"/>
-        <%            //index default
-            i += 1;
-            session.setAttribute("i", i);
-        %>
-        <% }%>
-
-        
-        
 
         <!-- footer -->
         <jsp:include page="./components/footer.jsp"/>
@@ -67,7 +48,7 @@
             crossorigin="anonymous"
         ></script>
 
-        <script src="User/js/index.js"></script>
+        <script src="User/js/hover.js"></script>
         <script src="User/js/navBar.js"></script>
     </body>
 </html>
