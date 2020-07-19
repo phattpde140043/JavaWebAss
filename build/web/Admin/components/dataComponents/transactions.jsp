@@ -19,8 +19,8 @@
     <% }%>
 
     $(document).ready(function () {
-        var success = '<span class="badge badge-success">Success</span>';
-        var pending = '<span class="badge badge-warning">Pending</span>';
+        var success = '<a href="#" class="badge badge-success">Success</a>';
+        var pending = '<a href="#" class="badge badge-warning">Pending</a>';
         var table = $('#transactionDataTable')
                 .DataTable({
                     "lengthMenu": [[-1, 50, 20, 10], ["All", 50, 20, 10]],

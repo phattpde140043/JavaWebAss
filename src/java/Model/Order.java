@@ -42,7 +42,7 @@ public class Order {
 
     @Override
     public String toString() {
-        return "" + book.getbName() + "," + tQuatity + "";
+        return "" + book.getbName() + " : " + tQuatity + "";
     }
 
 }

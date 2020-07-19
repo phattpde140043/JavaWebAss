@@ -31,7 +31,6 @@
                     <tr>
                         <th>ID</th>
                         <th>Email</th>
-                        <th>Password</th>
                         <th>Name</th>
                         <th>Phone</th>
                         <th>Address</th>
@@ -41,7 +40,6 @@
                     <tr>
                         <th>ID</th>
                         <th>Email</th>
-                        <th>Password</th>
                         <th>Name</th>
                         <th>Phone</th>
                         <th>Address</th>

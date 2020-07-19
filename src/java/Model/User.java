@@ -107,7 +107,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "[" + "'" + uAddress + "'" + ", " + "'" + uID + "'" + ", " + "'" + uEmail + "'" + ", " + "'" + uPassword + "'" + ", " + "'" + uName + "'" + ", " + "'" + uPhone + "'" + ']';
+        return "[" + "'" + uAddress + "'" + ", " + "'" + uID + "'" + ", " + "'" + uEmail + "'" +  ", " + "'" + uName + "'" + ", " + "'" + uPhone + "'" + ']';
     }
 
 }
