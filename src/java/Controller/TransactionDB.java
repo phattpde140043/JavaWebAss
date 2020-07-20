@@ -78,7 +78,7 @@ public class TransactionDB implements DatabaseInfo {
             PreparedStatement stmt = con.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
-                
+
                 result.add(new TransactionforDB(rs.getString(1), rs.getString(2), rs.getString(3), rs.getInt(4), rs.getBoolean(5), rs.getDate(6)));
             }
             con.close();
@@ -119,8 +119,8 @@ public class TransactionDB implements DatabaseInfo {
             }
 
         }
-        for(Transaction r : result){
-        r.setTotal();
+        for (Transaction r : result) {
+            r.setTotal();
         }
         //System.out.println(result.size()+"after");
         return result;
@@ -171,7 +171,7 @@ public class TransactionDB implements DatabaseInfo {
             ArrayList<Transaction> ls = getBytID(tID);
             //if(ls.isEmpty())System.out.println("null  2 "+tID);
             for (Transaction temp : ls) {
-                System.out.println("1"+ temp.gettID());
+                System.out.println("1" + temp.gettID());
                 result.add(temp);
             }
         }
@@ -280,26 +280,39 @@ public class TransactionDB implements DatabaseInfo {
         //return false;
     }
 
-    public void ChangeStatus(String tID) {
+    public boolean ChangeStatus(String tID) {
         try {
             Class.forName(driverName);
             int rc;
+            TransactionDB db = new TransactionDB();
+            ArrayList<Transaction> ls = db.getBytID(tID);
             try (Connection con = DriverManager.getConnection(dbURL, userDB, passDB)) {
-                PreparedStatement stmt = con.prepareStatement("Update Transactions set status=1 where tID= ?");
-                stmt.setString(1, tID);
+                PreparedStatement stmt = con.prepareStatement("Update Transactions set status=? where tID= ?");
+                if (ls.get(0).isStatus()) {
+                    stmt.setInt(1, 0);
+                } else {
+                    stmt.setInt(1, 1);
+                }
+                stmt.setString(2, tID);
                 rc = stmt.executeUpdate();
             }
-            if(rc==0 ) throw new Exception("Change Status failed");
+            if (rc == 0) {
+                throw new Exception("Change Status failed");
+            }
+            return true;
         } catch (Exception e) {
             System.out.println(e);
+            return false;
         }
     }
-    
-    public static void main(String[] args) {     
+
+    public static void main(String[] args) {
         TransactionDB db = new TransactionDB();
-        ArrayList<Transaction>  ls = db.getAll();
+        ArrayList<Transaction> ls = db.getAll();
         for (Transaction l : ls) {
             System.out.println(l.getTotal());
         }
+        boolean result = db.ChangeStatus("T002");
+        System.out.println("status : " + result);
     }
 }

@@ -53,9 +53,16 @@
             <result name="success" type ="redirect">''</result>
         </action>
         
+        <action name="orders">
+            <result>Admin/OrderRoute.jsp</result>
+        </action>
+        <action name="updateOrder" class="StructAdmin.updateOrderAction">
+            <result name="success">Admin/OrderRoute.jsp</result>
+            <result name="fail">Admin/Failed.jsp</result>        
+        </action>
         
-        
-        
+       
+
         <action name="category">
             <result>User/Category.jsp</result>
         </action>
@@ -65,9 +72,14 @@
         <action name="mylist">
             <result>User/Latest.jsp</result>
         </action>
-        <action name="cart">
-            <result>User/Cart.jsp</result>
+        <action name="cart" class="StructUser.CartAction">
+            <result name="success">User/Cart.jsp</result>
+            <result name="fail">Admin/Failed.jsp</result>       
         </action>
+        <action name="products">
+            <result>User/bookDetail.jsp</result>
+        </action>  
+
 
     </package>
 </struts>

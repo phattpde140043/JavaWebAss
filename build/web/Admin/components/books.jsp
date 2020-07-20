@@ -8,7 +8,7 @@
 <div class="container-fluid content">
     <!-- Page Heading -->
     <h1 class="h3 mb-2 text-gray-800">Books</h1>
-    
+
     <div id="demo_info" class="box"></div>
 
     <!--Adding new book-->

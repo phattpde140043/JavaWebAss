@@ -19,8 +19,6 @@
     <% }%>
 
     $(document).ready(function () {
-        var success = '<a href="#" class="badge badge-success">Success</a>';
-        var pending = '<a href="#" class="badge badge-warning">Pending</a>';
         var table = $('#transactionDataTable')
                 .DataTable({
                     "lengthMenu": [[-1, 50, 20, 10], ["All", 50, 20, 10]],
@@ -28,6 +26,9 @@
                 });
 
         $('#transactionDataTable tbody tr').each(function () {
+        var success = '<a href="orders?value=update&id=' + table.row(this).data()[0] + '" class="badge badge-success">Success</a>';
+        var pending = '<a href="orders?value=update&id=' + table.row(this).data()[0] + '" class="badge badge-warning">Pending</a>';
+       
             var elem = $(this).find('td:last');
             //do something with elem
             if (elem.html() == "false") {

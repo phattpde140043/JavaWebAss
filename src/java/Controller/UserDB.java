@@ -34,12 +34,12 @@ public class UserDB {
             PreparedStatement stmt = con.prepareStatement("Select uID, uEmail, uPassword, uName, uPhone, uAddress from Users");
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
-                String uID = rs.getString(2);
-                String uEmail = rs.getString(3);
-                String uPassword = rs.getString(4);
-                String uName = rs.getString(5);
-                String uPhone = rs.getString(6);
-                String uAddress = rs.getString(1);
+                String uID = rs.getString(1);
+                String uEmail = rs.getString(2);
+                String uPassword = rs.getString(3);
+                String uName = rs.getString(4);
+                String uPhone = rs.getString(5);
+                String uAddress = rs.getString(6);
                 s = new User(uID, uEmail, uPassword, uName, uPhone, uAddress);
                 list.add(s);
             }

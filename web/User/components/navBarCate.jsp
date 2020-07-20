@@ -15,7 +15,7 @@
 %>
 <div class="d-flex flex-column nav-with-sub" id="extra">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark top-bar p-0" id="top-bar">
-        <a class="navbar-brand pl-5" href="/JavaWebAssignmentStruct2">
+        <a class="navbar-brand pl-5" href="Home">
             <img src="User/img/LOGO.png" alt="" id="logo">
         </a>
         <button class="navbar-toggler mr-5" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -25,7 +25,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/JavaWebAssignmentStruct2">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="Home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="category">Category</a>
@@ -56,7 +56,7 @@
             </ul>
             <ul class="navbar-nav pr-3" style="position: relative">
                 <li class="nav-item pr-3">
-                <form><input><div class="div1"></div></input></form>
+                    <form><input id="search"><div class="div1"></div></input></form>
             </li>
                 <li class="nav-item pr-3">
                     <a href="#">

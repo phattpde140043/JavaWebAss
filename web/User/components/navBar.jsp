@@ -46,7 +46,7 @@
         </ul>
         <ul class="navbar-nav pr-3" style="position: relative">
             <li class="nav-item pr-3">
-                <form><input><div class="div1"></div></input></form>
+                <form><input id="search"><div class="div1"></div></input></form>
             </li>
             <li class="nav-item pr-3">
                 <a href="cart">

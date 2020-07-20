@@ -102,8 +102,6 @@ public class UpdateBookAction {
             boolean result = BookDBAdmin.updateBook(b);
             String URL = FAIL;
             if (result) {
-                Map session = ActionContext.getContext().getSession();
-                session.put("ID", result);
                 URL = SUCCESS;
             }
             return URL;
