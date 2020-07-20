@@ -1,8 +1,10 @@
+<%@page import="Model.Cart"%>
 <%@page import="Controller.BookDB"%>
 <%@page import="Model.Book"%>
 <%@page import="Model.Order"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.ArrayList"%>
+<%@taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -28,41 +30,44 @@
     </head>
     <body>
 
-        <%! ArrayList<Order> orderList = new ArrayList<Order>();%>
-        <%
-            pageContext.setAttribute("orderList", orderList);
-            Book b = BookDB.getById(request.getParameter("bid"));
-            Order o = new Order(request.getParameter("bid"), 1);
-        %>
         <!-- Nav bar -->
         <jsp:include page="./components/navBar.jsp"/>
 
         <div class="latest">
         </div>
 
+        <%
+            Cart cart = (Cart) session.getAttribute("CART");
+        %>
+
         <div class="container cart">
             <h1>Cart</h1>
             <div class="content">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col"></th>
-                            <th scope="col">Product</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Quantity</th>
-                            <th scope="col">Subtotal</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><img src="<%=b.getbCover()%>" width="64px"></td>
-                            <td><%=b.getbName()%></td>
-                            <td>$<%=b.getbPrice()%></td>
-                            <td>1</td>
-                            <td>$<%=b.getbPrice()%></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <%--<s:if test="%{orderList != null}">--%>
+                <s:if test="%{#session.CART != null}">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Product</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <s:form>
+                                <tr>
+                                    <td><img src="" width="64px"></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </s:form>
+                        </tbody>
+                    </table>
+                </s:if>
             </div>
         </div>
 

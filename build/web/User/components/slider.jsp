@@ -60,7 +60,7 @@
                         %>
                         <div class="m-2 col-xs-6 col-md-6 col-lg-2 p-0 m-0 d-flex justify-content-center flex-column box">
                             <img src="<%=bl.get(j).getbCover()%>" alt="" class="w-100">
-                                <p class="title p-0 m-0"><a href="#"><%=bl.get(j).getbName()%></a></p>
+                                <p class="title p-0 m-0"><a href="products?id=<%=bl.get(j).getbId()%>"><%=bl.get(j).getbName()%></a></p>
                                 <div class="overlay"></div>
                                 <div class="button w-100 p-0 m-0">
                                     <a href="cart?bid=<%=bl.get(j).getbId()%>" id="addToCart" class="w-100 p-0" onclick="change()" onclick="change()"><svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bag-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -77,7 +77,7 @@
                         %>
                         <div class="m-2 col-xs-6 col-md-6 col-lg-2 p-0 m-0 d-flex justify-content-center flex-column box">
                             <img src="<%=bl.get(j).getbCover()%>" alt="" class="w-100">
-                                <p class="title p-0 m-0"><a href="#"><%=bl.get(j).getbName()%></a></p>
+                                <p class="title p-0 m-0"><a href="products?id=<%=bl.get(j).getbId()%>"><%=bl.get(j).getbName()%></a></p>
                                 <div class="overlay"></div>
                                 <div class="button w-100 p-0 m-0">
                                     <a href="cart?bid=<%=bl.get(j).getbId()%>" id="addToCart" class="w-100 p-0" onclick="change()" onclick="change()"><svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bag-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -104,7 +104,7 @@
                         %>
                         <div class="m-2 col-xs-6 col-md-6 col-lg-2 p-0 m-0 d-flex justify-content-center flex-column box">
                             <img src="<%=bl.get(k + (pageElem * j)).getbCover()%>" alt="" class="w-100">
-                                <p class="title p-0 m-0"><a href="#"><%=bl.get(k + (pageElem * j)).getbName()%></a></p>
+                                <p class="title p-0 m-0"><a href="products?id=<%=bl.get(k + (pageElem * j)).getbId()%>"><%=bl.get(k + (pageElem * j)).getbName()%></a></p>
                                 <div class="overlay"></div>
                                 <div class="button w-100 p-0 m-0">
                                     <a href="cart?bid=<%=bl.get(j).getbId()%>" id="addToCart" class="w-100 p-0" onclick="change()" onclick="change()"><svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bag-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -121,7 +121,7 @@
                         %>
                         <div class="m-2 col-xs-6 col-md-6 col-lg-2 p-0 m-0 d-flex justify-content-center flex-column box">
                             <img src="<%=bl.get(k + (pageElem * j)).getbCover()%>" alt="" class="w-100">
-                                <p class="title p-0 m-0"><a href="#"><%=bl.get(k + (pageElem * j)).getbName()%></a></p>
+                                <p class="title p-0 m-0"><a href="products?id=<%=bl.get(k + (pageElem * j)).getbId()%>"><%=bl.get(k + (pageElem * j)).getbName()%></a></p>
                                 <div class="overlay"></div>
                                 <div class="button w-100 p-0 m-0">
                                     <a href="cart?bid=<%=bl.get(j).getbId()%>" id="addToCart" class="w-100 p-0" onclick="change()" onclick="change()"><svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bag-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

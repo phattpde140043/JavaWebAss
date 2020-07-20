@@ -1,0 +1,86 @@
+.latest {
+    min-height: 20vh;
+}
+
+.book-detail {
+    color: rgba(256, 256, 256, 0.6);
+}
+
+.product-gallery img {
+    width: 350px;
+}
+
+.summary h1 {
+    padding-top: 20px;
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 40px;
+    margin-bottom: 1.5rem; 
+}
+
+.rating {
+    margin-bottom: 1.5rem; 
+}
+
+.des {
+    margin-bottom: 1.5rem;
+}
+
+.offer-box {
+    background-color: #ddd;
+    width: 300px;
+    border-radius: 15px 15px 5px 5px;
+    clear: both;
+    margin-bottom: 30px;
+    padding: 20px 20px 0;
+    border: 1px solid #ddd;
+}
+
+.offer-box p {
+    display: block;
+    margin: -21px -21px 15px -21px;
+    padding: 10px 20px;
+    border-radius: 6px 6px 0 0;
+    background: #1b262c;
+}
+
+.offer-box .price {
+    display: block;
+    font-size: 25px;
+    line-height: 30px;
+    color: #ececec;
+}
+
+.offer-box input {
+    width: 60px !important;
+    padding: 7px 0 7px 12px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    text-align: center;
+    height: 38px !important;
+    background-color: #ddd;
+    border: .5px solid #666;
+}
+
+.offer-box .btn {
+    height: 37px !important;
+    background-color: #c4fb6d;
+    border-radius: 45px;
+    color: #000;
+    text-transform: uppercase;
+    padding: .5rem 2rem;
+    border: none;
+}
+
+.offer-box form {
+    margin-bottom: 1rem;
+}
+
+
+/*-- Media queries --*/
+@media (max-width: 992px) {
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 576px) {
+}
