@@ -133,7 +133,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            Add new book ?
+                            Update book ?
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

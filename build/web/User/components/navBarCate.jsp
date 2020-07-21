@@ -59,7 +59,7 @@
                     <form><input id="search"><div class="div1"></div></input></form>
             </li>
                 <li class="nav-item pr-3">
-                    <a href="#">
+                    <a href="showCart">
                         <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-bag" fill="currentColor"
                              xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"

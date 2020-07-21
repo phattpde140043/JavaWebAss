@@ -6,17 +6,14 @@
 package StructUser;
 
 import Model.Cart;
-import Model.Order;
 import com.opensymphony.xwork2.ActionContext;
-import java.util.ArrayList;
 import java.util.Map;
-import com.opensymphony.xwork2.ActionSupport;
 
 /**
  *
  * @author Admin
  */
-public class CartAction {
+public class AddToCartAction {
 
     private String bid;
 
@@ -31,7 +28,7 @@ public class CartAction {
         this.bid = bid;
     }
     
-    public CartAction() {
+    public AddToCartAction() {
     }
 
     public String execute() throws Exception {

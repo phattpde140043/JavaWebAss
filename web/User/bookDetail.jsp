@@ -82,7 +82,7 @@
 
                     <!--add to cart-->
                     <form class="d-flex justify-content-start align-items-center" action="cart">
-                        <input name="bid" type="text" value="<%=b.getbId()%>">
+                        <input name="bid" type="text" value="<%=b.getbId()%>" readonly>
                         <button type="submit" class="btn ml-3 btn-primary">Add to cart</button>
                     </form>
                 </div>

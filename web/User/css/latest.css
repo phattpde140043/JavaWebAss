@@ -1,5 +1,17 @@
 .latest {
-    min-height: 20vh;
+    min-height: 150px;
+}
+
+.cart h5:after {
+    padding-left: 10px;
+    content: '>';
+    color: gray;
+}
+
+h5 a:hover {
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.7;
 }
 
 

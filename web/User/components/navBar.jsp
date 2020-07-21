@@ -49,7 +49,7 @@
                 <form><input id="search"><div class="div1"></div></input></form>
             </li>
             <li class="nav-item pr-3">
-                <a href="cart">
+                <a href="showCart">
                     <svg
                         width="1.5em"
                         height="1.5em"

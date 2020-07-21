@@ -62,7 +62,13 @@
         </action>
         
        
-
+        <action name="register" >
+            <result>User/Register.jsp</result>
+        </action>
+        <action name="newUserRegister" class="StructUser.RegisterAction">
+            <result name="success">Admin/Login.jsp</result>
+            <result name="fail">Admin/Failed.jsp</result>  
+        </action>
         <action name="category">
             <result>User/Category.jsp</result>
         </action>
@@ -72,7 +78,14 @@
         <action name="mylist">
             <result>User/Latest.jsp</result>
         </action>
-        <action name="cart" class="StructUser.CartAction">
+        <action name="showCart">
+            <result>User/Cart.jsp</result>
+        </action>
+        <action name="cart" class="StructUser.AddToCartAction">
+            <result name="success">User/Cart.jsp</result>
+            <result name="fail">Admin/Failed.jsp</result>       
+        </action>
+        <action name="removeCart" class="StructUser.RemoveCartAction">
             <result name="success">User/Cart.jsp</result>
             <result name="fail">Admin/Failed.jsp</result>       
         </action>

@@ -5,13 +5,8 @@
  */
 package StructAdmin;
 
-import Controller.BookDBAdmin;
 import Controller.UserDB;
-import Model.Book;
 import Model.User;
-import com.opensymphony.xwork2.ActionContext;
-import java.util.Map;
-import javax.servlet.http.HttpServletRequest;
 
 /**
  *

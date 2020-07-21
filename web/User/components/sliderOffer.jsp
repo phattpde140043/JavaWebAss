@@ -36,13 +36,8 @@
     <div class="p-0 m-0">
         <!-- slider real -->
         <div id="carouselExampleIndicators<%=random_double%>" class="carousel slide p-5" data-ride="carousel" data-pause="hover" data-interval="500000">
-            <%if (request.getParameter("value") != null) {
-                    Category c = CategoryDB.getById(request.getParameter("value"));
-            %>
-            <h2 class="pb-3 category"><%=c.getCatName()%></h2>    
-            <%} else {%>
-            <h2 class="pb-3 category"><%=category[i]%></h2>  
-            <%}%>
+
+            <h2 class="pb-3 category">You may be interested in ... </h2>
 
             <ol class="carousel-indicators p-0 hover">
                 <li data-target="#carouselExampleIndicators<%=random_double%>" data-slide-to="0" class="active"></li>
@@ -56,9 +51,9 @@
                     <div class="row d-flex justify-content-center">
                         <%
                             if (bl.size() >= 5)
-                                for (int j = 0; j < 5; j++) {
+                                for (int j = 1; j < 4; j++) {
                         %>
-                        <div class="m-2 col-xs-6 col-md-6 col-lg-2 p-0 m-0">
+                        <div class="col-xs-11 col-md-11 col-lg-4 p-0 m-0" style="margin: 0">
                             <div class="d-flex justify-content-center flex-column box">
                                 <img src="<%=bl.get(j).getbCover()%>" alt="" class="w-100">
                                     <p class="title p-0 m-0"><a href="products?id=<%=bl.get(j).getbId()%>"><%=bl.get(j).getbName()%></a></p>

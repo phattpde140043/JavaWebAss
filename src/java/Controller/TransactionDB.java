@@ -7,6 +7,7 @@ package Controller;
 
 import Model.*;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,6 +15,7 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Stack;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -312,7 +314,7 @@ public class TransactionDB implements DatabaseInfo {
         for (Transaction l : ls) {
             System.out.println(l.getTotal());
         }
-        boolean result = db.ChangeStatus("T002");
-        System.out.println("status : " + result);
-    }
+        Date d = new Date(Calendar.getInstance().getTime().getTime());
+        Transaction t = new Transaction("U001", false, d);
+   }
 }

@@ -7,9 +7,6 @@ package StructAdmin;
 
 import Controller.BookDBAdmin;
 import Model.Book;
-import com.opensymphony.xwork2.ActionContext;
-import java.util.Map;
-import javax.servlet.http.HttpServletRequest;
 
 /**
  *
@@ -93,8 +90,6 @@ public class NewBookAction {
             boolean result = BookDBAdmin.addNewBook(b);
             String URL = FAIL;
             if (result) {
-                Map session = ActionContext.getContext().getSession();
-                session.put("ID", result);
                 URL = SUCCESS;
             }
             return URL;

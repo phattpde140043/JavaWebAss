@@ -66,8 +66,8 @@
 
 .slider .carousel-inner .carousel-item .box {
   position: relative;
-  width: 180px;
-  height: 270px;
+  width: 180px !important;
+  height: 270px !important;
   background-color: rgba(0, 0, 0, 1);
 }
 
@@ -75,7 +75,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100% !important;
+  width: 180px !important;
   height: 100% !important;
   margin: 0;
   background: rgba(0, 0, 0, 0);

@@ -1,7 +1,50 @@
 .latest {
-    min-height: 20vh;
+    min-height: 170px;
 }
 
+.cart h5:after {
+    padding-left: 10px;
+    content: '>';
+    color: gray;
+}
+
+h5 a:hover {
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.7;
+}
+
+.items {
+    padding: 3rem 3rem 1rem 3rem;
+    box-shadow: 1px 1px 15px 2px #000;
+}
+
+h2{
+    font-size: 26px !important;
+}
+
+.cart-sub {
+    margin: 10rem 0rem;
+}
+
+.cart-sell {
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 1px 1px 15px 2px #000;
+}
+
+.cart-total table{ 
+    width: 50%;
+}
+
+.cart-total table th{
+    padding-bottom: 1rem;
+}
+
+.cart-total .btn{ 
+    border-radius: 50px;
+    height: 50px
+}
 
 
 /*-- Media queries --*/

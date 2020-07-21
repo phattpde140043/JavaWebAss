@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package StructAdmin;
+package StructUser;
 
 import Controller.UserDB;
 import Model.User;
@@ -12,9 +12,8 @@ import Model.User;
  *
  * @author Admin
  */
-public class UpdateUserAction {
+public class RegisterAction {
 
-    private String id;
     private String email;
     private String password;
     private String name;
@@ -23,14 +22,6 @@ public class UpdateUserAction {
 
     private final String SUCCESS = "success";
     private final String FAIL = "fail";
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getEmail() {
         return email;
@@ -71,16 +62,16 @@ public class UpdateUserAction {
     public void setAddress(String address) {
         this.address = address;
     }
-
-    public UpdateUserAction() {
+    
+    public RegisterAction() {
     }
+    
 
     public String execute() throws Exception {
         try {
-            //User s = new User("U0014", "aaaa@xxxxx.x", "ThanhLam", "hihi", "1425555", "Ha Noi");
-            User s = new User(id, email, password, name, phone, address);
+            User s = new User(email, password, name, phone, address) ;
             System.out.println("user :" + s.toString());
-            boolean result = UserDB.updateUser(s);
+            boolean result = UserDB.addNewUser(s);
             String URL = FAIL;
             if (result) {
                 URL = SUCCESS;

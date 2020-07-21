@@ -36,12 +36,12 @@
     <div class="p-0 m-0">
         <!-- slider real -->
         <div id="carouselExampleIndicators<%=random_double%>" class="carousel slide p-5" data-ride="carousel" data-pause="hover" data-interval="500000">
-            <%if(request.getParameter("value") != null){
-                Category c = CategoryDB.getById(request.getParameter("value"));
+            <%if (request.getParameter("value") != null) {
+                    Category c = CategoryDB.getById(request.getParameter("value"));
             %>
             <h2 class="pb-3 category"><%=c.getCatName()%></h2>    
             <%} else {%>
-                <h2 class="pb-3 category"><%=category[i]%></h2>  
+            <h2 class="pb-3 category"><%=category[i]%></h2>  
             <%}%>
 
             <ol class="carousel-indicators p-0 hover">
@@ -58,35 +58,39 @@
                             if (bl.size() >= 5)
                                 for (int j = 0; j < 5; j++) {
                         %>
-                        <div class="m-2 col-xs-6 col-md-6 col-lg-2 p-0 m-0 d-flex justify-content-center flex-column box">
-                            <img src="<%=bl.get(j).getbCover()%>" alt="" class="w-100">
-                                <p class="title p-0 m-0"><a href="products?id=<%=bl.get(j).getbId()%>"><%=bl.get(j).getbName()%></a></p>
-                                <div class="overlay"></div>
-                                <div class="button w-100 p-0 m-0">
-                                    <a href="cart?bid=<%=bl.get(j).getbId()%>" id="addToCart" class="w-100 p-0" onclick="change()" onclick="change()"><svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bag-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" d="M14 5H2v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V5zM1 4v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4H1z"/>
-                                            <path d="M8 1.5A2.5 2.5 0 0 0 5.5 4h-1a3.5 3.5 0 1 1 7 0h-1A2.5 2.5 0 0 0 8 1.5z"/>
-                                            <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z"/>
-                                            <path fill-rule="evenodd" d="M7.5 10a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-2z"/>
-                                        </svg></a>
-                                </div>
+                        <div class="m-2 col-xs-6 col-md-6 col-lg-2 p-0 m-0">
+                            <div class="d-flex justify-content-center flex-column box">
+                                <img src="<%=bl.get(j).getbCover()%>" alt="" class="w-100">
+                                    <p class="title p-0 m-0"><a href="products?id=<%=bl.get(j).getbId()%>"><%=bl.get(j).getbName()%></a></p>
+                                    <div class="overlay"></div>
+                                    <div class="button w-100 p-0 m-0">
+                                        <a href="cart?bid=<%=bl.get(j).getbId()%>" id="addToCart" class="w-100 p-0" onclick="change()" onclick="change()"><svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bag-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" d="M14 5H2v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V5zM1 4v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4H1z"/>
+                                                <path d="M8 1.5A2.5 2.5 0 0 0 5.5 4h-1a3.5 3.5 0 1 1 7 0h-1A2.5 2.5 0 0 0 8 1.5z"/>
+                                                <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z"/>
+                                                <path fill-rule="evenodd" d="M7.5 10a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-2z"/>
+                                            </svg></a>
+                                    </div>
+                            </div>
                         </div>
                         <% }
                         else
                             for (int j = 0; j < bl.size(); j++) {
                         %>
-                        <div class="m-2 col-xs-6 col-md-6 col-lg-2 p-0 m-0 d-flex justify-content-center flex-column box">
-                            <img src="<%=bl.get(j).getbCover()%>" alt="" class="w-100">
-                                <p class="title p-0 m-0"><a href="products?id=<%=bl.get(j).getbId()%>"><%=bl.get(j).getbName()%></a></p>
-                                <div class="overlay"></div>
-                                <div class="button w-100 p-0 m-0">
-                                    <a href="cart?bid=<%=bl.get(j).getbId()%>" id="addToCart" class="w-100 p-0" onclick="change()" onclick="change()"><svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bag-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" d="M14 5H2v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V5zM1 4v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4H1z"/>
-                                            <path d="M8 1.5A2.5 2.5 0 0 0 5.5 4h-1a3.5 3.5 0 1 1 7 0h-1A2.5 2.5 0 0 0 8 1.5z"/>
-                                            <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z"/>
-                                            <path fill-rule="evenodd" d="M7.5 10a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-2z"/>
-                                        </svg></a>
-                                </div>
+                        <div class="m-2 col-xs-6 col-md-6 col-lg-2 p-0 m-0 d-flex">
+                            <div class="d-flex justify-content-center flex-column box">
+                                <img src="<%=bl.get(j).getbCover()%>" alt="" class="w-100">
+                                    <p class="title p-0 m-0"><a href="products?id=<%=bl.get(j).getbId()%>"><%=bl.get(j).getbName()%></a></p>
+                                    <div class="overlay"></div>
+                                    <div class="button w-100 p-0 m-0">
+                                        <a href="cart?bid=<%=bl.get(j).getbId()%>" id="addToCart" class="w-100 p-0" onclick="change()" onclick="change()"><svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bag-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" d="M14 5H2v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V5zM1 4v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4H1z"/>
+                                                <path d="M8 1.5A2.5 2.5 0 0 0 5.5 4h-1a3.5 3.5 0 1 1 7 0h-1A2.5 2.5 0 0 0 8 1.5z"/>
+                                                <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z"/>
+                                                <path fill-rule="evenodd" d="M7.5 10a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-2z"/>
+                                            </svg></a>
+                                    </div>
+                            </div> 
                         </div>
                         <%
                             }%>
@@ -102,35 +106,39 @@
                             if ((bl.size() - (pageElem * j)) >= 5)
                                 for (int k = 0; k < 5; k++) {
                         %>
-                        <div class="m-2 col-xs-6 col-md-6 col-lg-2 p-0 m-0 d-flex justify-content-center flex-column box">
-                            <img src="<%=bl.get(k + (pageElem * j)).getbCover()%>" alt="" class="w-100">
-                                <p class="title p-0 m-0"><a href="products?id=<%=bl.get(k + (pageElem * j)).getbId()%>"><%=bl.get(k + (pageElem * j)).getbName()%></a></p>
-                                <div class="overlay"></div>
-                                <div class="button w-100 p-0 m-0">
-                                    <a href="cart?bid=<%=bl.get(j).getbId()%>" id="addToCart" class="w-100 p-0" onclick="change()" onclick="change()"><svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bag-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" d="M14 5H2v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V5zM1 4v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4H1z"/>
-                                            <path d="M8 1.5A2.5 2.5 0 0 0 5.5 4h-1a3.5 3.5 0 1 1 7 0h-1A2.5 2.5 0 0 0 8 1.5z"/>
-                                            <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z"/>
-                                            <path fill-rule="evenodd" d="M7.5 10a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-2z"/>
-                                        </svg></a>
-                                </div>
+                        <div class="m-2 col-xs-6 col-md-6 col-lg-2 p-0 m-0">
+                            <div class="d-flex justify-content-center flex-column box">
+                                <img src="<%=bl.get(k + (pageElem * j)).getbCover()%>" alt="" class="w-100">
+                                    <p class="title p-0 m-0"><a href="products?id=<%=bl.get(k + (pageElem * j)).getbId()%>"><%=bl.get(k + (pageElem * j)).getbName()%></a></p>
+                                    <div class="overlay"></div>
+                                    <div class="button w-100 p-0 m-0">
+                                        <a href="cart?bid=<%=bl.get(j).getbId()%>" id="addToCart" class="w-100 p-0" onclick="change()" onclick="change()"><svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bag-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" d="M14 5H2v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V5zM1 4v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4H1z"/>
+                                                <path d="M8 1.5A2.5 2.5 0 0 0 5.5 4h-1a3.5 3.5 0 1 1 7 0h-1A2.5 2.5 0 0 0 8 1.5z"/>
+                                                <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z"/>
+                                                <path fill-rule="evenodd" d="M7.5 10a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-2z"/>
+                                            </svg></a>
+                                    </div>
+                            </div>
                         </div>
                         <% }
                         else
                             for (int k = 0; k < (bl.size() - (pageElem * j)); k++) {
                         %>
-                        <div class="m-2 col-xs-6 col-md-6 col-lg-2 p-0 m-0 d-flex justify-content-center flex-column box">
-                            <img src="<%=bl.get(k + (pageElem * j)).getbCover()%>" alt="" class="w-100">
-                                <p class="title p-0 m-0"><a href="products?id=<%=bl.get(k + (pageElem * j)).getbId()%>"><%=bl.get(k + (pageElem * j)).getbName()%></a></p>
-                                <div class="overlay"></div>
-                                <div class="button w-100 p-0 m-0">
-                                    <a href="cart?bid=<%=bl.get(j).getbId()%>" id="addToCart" class="w-100 p-0" onclick="change()" onclick="change()"><svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bag-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" d="M14 5H2v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V5zM1 4v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4H1z"/>
-                                            <path d="M8 1.5A2.5 2.5 0 0 0 5.5 4h-1a3.5 3.5 0 1 1 7 0h-1A2.5 2.5 0 0 0 8 1.5z"/>
-                                            <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z"/>
-                                            <path fill-rule="evenodd" d="M7.5 10a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-2z"/>
-                                        </svg></a>
-                                </div>
+                        <div class="m-2 col-xs-6 col-md-6 col-lg-2 p-0 m-0">
+                            <div class="d-flex justify-content-center flex-column box">
+                                <img src="<%=bl.get(k + (pageElem * j)).getbCover()%>" alt="" class="w-100">
+                                    <p class="title p-0 m-0"><a href="products?id=<%=bl.get(k + (pageElem * j)).getbId()%>"><%=bl.get(k + (pageElem * j)).getbName()%></a></p>
+                                    <div class="overlay"></div>
+                                    <div class="button w-100 p-0 m-0">
+                                        <a href="cart?bid=<%=bl.get(j).getbId()%>" id="addToCart" class="w-100 p-0" onclick="change()" onclick="change()"><svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bag-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" d="M14 5H2v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V5zM1 4v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4H1z"/>
+                                                <path d="M8 1.5A2.5 2.5 0 0 0 5.5 4h-1a3.5 3.5 0 1 1 7 0h-1A2.5 2.5 0 0 0 8 1.5z"/>
+                                                <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z"/>
+                                                <path fill-rule="evenodd" d="M7.5 10a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-2z"/>
+                                            </svg></a>
+                                    </div>
+                            </div>
                         </div>
                         <%
                             }%>

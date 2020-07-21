@@ -7,9 +7,6 @@ package StructAdmin;
 
 import Controller.BookDBAdmin;
 import Model.Book;
-import com.opensymphony.xwork2.ActionContext;
-import java.util.Map;
-import javax.servlet.http.HttpServletRequest;
 
 /**
  *

@@ -23,7 +23,7 @@
         <div class="wrapper">
             <div class="header">
                 <nav class="navbar navbar-light bg-transparent">
-                    <a class="navbar-brand ml-3" href="#">
+                    <a class="navbar-brand ml-3" href="/JavaWebAssignmentStruct2">
                         <img src="User/img/LOGO.png" alt="logo" loading="lazy" id="logo">
                     </a>
                 </nav>
@@ -31,25 +31,43 @@
 
             <div class="container d-flex justify-content-center">
                 <div class="form-login">
-                    <h1 class="font-weight-bold">Sign In</h1>
+                    <h1 class="font-weight-bold">Sign Up</h1>
 
-                    <!--Form login here !!!-->
+                    <!--Form sign up here !!!-->
 
-                    <form class="needs-validation" novalidate action="">
+                    <form class="needs-validation" novalidate action="newUserRegister" method="post">
                         <div class="form-group">
                             <label class="label-inside" for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                            <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
                             <div class="valid-feedback">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="label-inside" for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" required>
+                            <input name="password" type="password" class="form-control" id="exampleInputPassword1" required>
+                            <div class="valid-feedback">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="label-inside" for="exampleInputPassword1">Name</label>
+                            <input name="name" type="text" class="form-control" id="exampleInputPassword1" required>
+                            <div class="valid-feedback">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="label-inside" for="exampleInputPassword1">Phone-number</label>
+                            <input name="phone" type="text" class="form-control" id="exampleInputPassword1" required>
+                            <div class="valid-feedback">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="label-inside" for="exampleInputPassword1">Address</label>
+                            <input name="address" type="text" class="form-control" id="exampleInputPassword1" required>
                             <div class="valid-feedback">
                             </div>
                         </div>
 
-                        <button type="submit" class="mt-2 btn w-100 mb-2 mt-4">Sign In</button>
+                        <button type="submit" class="mt-2 btn w-100 mb-2 mt-4">Sign Up</button>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="form-group form-check p-0">
                                 <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
@@ -60,8 +78,8 @@
                     </form>
                     
                     <div class="sign-in">
-                        New to Nerd? 
-                        <a href="#">Sign up now</a>
+                        Alredy became Nerder? 
+                        <a href="/JavaWebAssignmentStruct2">Sign in now</a>
                     </div>
                     
                     <div class="d-flex justify-content-center sub-img">

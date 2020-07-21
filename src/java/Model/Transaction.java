@@ -6,7 +6,6 @@
 package Model;
 
 import Controller.UserDB;
-import java.time.LocalDate;
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +29,15 @@ public class Transaction {
         this.tDate = tDate;
         setTotal();
     }
+
+    public Transaction(String uID, boolean Status, Date tDate) {
+        this.us = UserDB.getUserById(uID);
+        this.Status = Status;
+        this.tDate = tDate;
+        setTotal();
+    }
+    
+    
 
     public String gettID() {
         return tID;
