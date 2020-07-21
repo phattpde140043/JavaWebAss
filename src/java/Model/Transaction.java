@@ -5,6 +5,7 @@
  */
 package Model;
 
+import Controller.TransactionDB;
 import Controller.UserDB;
 import java.time.LocalDate;
 import java.sql.Date;
@@ -16,19 +17,30 @@ import java.util.List;
  * @author tran phu phat
  */
 public class Transaction {
+
     private String tID;
     private User us;
-    private List<Order> Cart= new ArrayList<>() ;
+    private List<Order> Cart = new ArrayList<>();
     private boolean Status;
     private Date tDate;
-    private Double Total=0.0;
+    private Double Total = 0.0;
 
-    public Transaction(String tID, String uID, boolean Status, Date tDate) {
-        this.tID = tID;
-        this.us = UserDB.getUserById(uID);
+    public Transaction(String Uid, boolean Status, Date tDate, List<Order> Cart) {
+        this.tID = TransactionDB.createTransactionID();
+        this.us = UserDB.getUserById(Uid);
         this.Status = Status;
         this.tDate = tDate;
-        setTotal();
+        this.Cart = Cart;
+    }
+
+    public Transaction(String tID, String Uid, boolean Status, Date tDate) {
+        this.tID = tID;
+        this.us = UserDB.getUserById(Uid);
+        this.Status = Status;
+        this.tDate = tDate;
+    }
+
+    public Transaction() {
     }
 
     public String gettID() {
@@ -53,12 +65,10 @@ public class Transaction {
 
     public void setTotal() {
         for (Order order : Cart) {
-            this.Total+=(order.getBook().getbPrice()*order.gettQuatity()); 
+            this.Total += (order.getBook().getbPrice() * order.gettQuatity());
         }
-        
-    }
 
-    
+    }
 
     public List<Order> getCart() {
         return Cart;
@@ -66,7 +76,7 @@ public class Transaction {
 
     public void setCart(List<Order> Cart) {
         this.Cart = Cart;
-        
+
     }
 
     public boolean isStatus() {

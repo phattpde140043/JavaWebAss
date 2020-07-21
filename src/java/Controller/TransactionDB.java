@@ -262,7 +262,7 @@ public class TransactionDB implements DatabaseInfo {
         for (TransactionforDB tran : list) {
             try (Connection con = DriverManager.getConnection(dbURL, userDB, passDB)) {
                 PreparedStatement stmt = con.prepareStatement("insert into Transactions(tID,uID,bID,tQuantity,status,tDate) values(?,?,?,?,?,getdate())");
-                stmt.setString(1, createTransactionID());
+                stmt.setString(1, tran.gettID());
                 stmt.setString(2, tran.getuID());
                 stmt.setString(3, tran.getbID());
                 stmt.setInt(4, tran.gettQuatity());
