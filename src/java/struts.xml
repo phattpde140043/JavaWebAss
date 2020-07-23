@@ -37,13 +37,12 @@
             <result name="success">Admin/BookRoute.jsp</result>
             <result name="fail">Admin/Failed.jsp</result>        
         </action>
-        
         <action name="users">
             <result>Admin/UserRoute.jsp</result>
         </action>
         <action name="newUser" class="StructAdmin.NewUserAction" >
             <result name="success">Admin/UserRoute.jsp</result>
-            <result name="fail">Admin/Failed.jsp</result>
+            <result name="fail">Admin/UserRoute.jsp</result>
         </action>
         <action name="updateUser" class="StructAdmin.UpdateUserAction">
             <result name="success">Admin/UserRoute.jsp</result>
@@ -52,7 +51,6 @@
         <action name="logout" class="StructAdmin.LoginAction" method="logout"> 
             <result name="success" type ="redirect">''</result>
         </action>
-        
         <action name="orders">
             <result>Admin/OrderRoute.jsp</result>
         </action>
@@ -78,6 +76,9 @@
         <action name="mylist">
             <result>User/Latest.jsp</result>
         </action>
+        <action name="products">
+            <result>User/bookDetail.jsp</result>
+        </action> 
         <action name="showCart">
             <result>User/Cart.jsp</result>
         </action>
@@ -89,9 +90,18 @@
             <result name="success">User/Cart.jsp</result>
             <result name="fail">Admin/Failed.jsp</result>       
         </action>
-        <action name="products">
-            <result>User/bookDetail.jsp</result>
-        </action>  
+        <action name="checkout" class="StructUser.CheckoutAction">
+            <result name="success">User/Cart.jsp</result>
+            <result name="fail">Admin/Failed.jsp</result>       
+        </action>
+        <action name="myOrder">
+            <result>User/MyOrder.jsp</result>
+        </action>
+        <action name="orderDetail">
+            <result>User/orderDetail.jsp</result>
+        </action>
+
+         
 
 
     </package>

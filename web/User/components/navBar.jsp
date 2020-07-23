@@ -4,11 +4,16 @@
     Author     : Admin
 --%>
 
+<%@page import="Controller.UserDB"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="Controller.CategoryDB"%>
 <%@page import="Model.Category"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:include page="./preLoadNavBar.jsp"/>
+<script
+            src="https://kit.fontawesome.com/e96465b91f.js"
+            crossorigin="anonymous"
+></script>
 <nav
     class="navbar navbar-expand-lg navbar-dark bg-dark top-bar fixed-top p-0"
     id="top-bar"
@@ -48,7 +53,7 @@
             <li class="nav-item pr-3">
                 <form><input id="search"><div class="div1"></div></input></form>
             </li>
-            <li class="nav-item pr-3">
+            <li class="nav-item pr-3 d-flex align-items-center">
                 <a href="showCart">
                     <svg
                         width="1.5em"
@@ -68,7 +73,7 @@
                     </svg>
                 </a>
             </li>
-            <li class="nav-item pr-3">
+            <li class="nav-item pr-1 d-flex align-items-center">
                 <a href="#">
                     <svg
                         width="1.5em"
@@ -86,8 +91,18 @@
                     </svg>
                 </a>
             </li>
-            <li class="nav-item pr-5">
-                <a href="#">
+
+            <!-- Nav Item - User Information -->
+            <li class="nav-item pr-3 dropdown d-flex align-items-center">
+                <a 
+                    class="nav-link"
+                    href="#"
+                    id="userDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    >
                     <svg
                         width="1em"
                         height="1em"
@@ -101,6 +116,34 @@
                             />
                     </svg>
                 </a>
+                <!-- Dropdown - User Information -->
+                <%
+                    String id = (String) session.getAttribute("ID");
+                    String s = UserDB.getUserById(id).getuName();
+                %>
+                <div
+                    class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                    aria-labelledby="userDropdown"
+                    >
+                    <a class="dropdown-item" href="#">
+                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                        <%=s%>
+                    </a>
+                    <a class="dropdown-item" href="myOrder">
+                        <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                        Activity Log
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a
+                        class="dropdown-item"
+                        href="logout"
+                        >
+                        <i
+                            class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"
+                            ></i>
+                        Logout
+                    </a>
+                </div>
             </li>
         </ul>
     </div>

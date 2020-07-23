@@ -1,0 +1,45 @@
+.latest {
+    height: 150px;
+}
+.title h1 {
+    font-size: 1.3rem;
+}
+
+.title {
+    margin-bottom: 2rem;
+}
+
+.order-info {
+    margin-bottom: 2rem;
+}
+
+.order-info h2 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.order-info p {
+   margin: 0; 
+}
+
+.order-info .box {
+    border-radius: 3px;
+    height: 100px;
+    margin-right: 1rem;
+    padding: 1rem .5rem;
+    box-shadow: 0px 0px 5px 1px #ccc;
+
+}
+
+.product img {
+    width: 64px;
+}
+
+/*-- Media queries --*/
+@media (max-width: 992px) {
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 576px) {
+}

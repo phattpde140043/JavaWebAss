@@ -13,7 +13,7 @@
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
             />
-        <title>Document</title>
+        <title>Admin</title>
         <link
             rel="stylesheet"
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -84,19 +84,15 @@
         
         <script
             type="text/javascript"
+            src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"
+        ></script>
+        <script
+            type="text/javascript"
             src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"
         ></script>
 
         <!-- Table data -->
-        <%
-            if (request.getParameter("value") == null) {
-        %>
-        <jsp:include page="./components/dataComponents/users.jsp"/>
-        <% } else if (request.getParameter("value").equalsIgnoreCase("")) {
-        %>
-        <jsp:include page="./components/dataComponents/users.jsp"/>
-        <% }
-        %>
+                <jsp:include page="./components/dataComponents/users.jsp"/>
 
     </body>
 </html>

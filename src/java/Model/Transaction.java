@@ -5,6 +5,7 @@
  */
 package Model;
 
+import Controller.TransactionDB;
 import Controller.UserDB;
 import java.sql.Date;
 import java.util.ArrayList;
@@ -22,6 +23,9 @@ public class Transaction {
     private Date tDate;
     private Double Total=0.0;
 
+    public Transaction() {
+    }
+            
     public Transaction(String tID, String uID, boolean Status, Date tDate) {
         this.tID = tID;
         this.us = UserDB.getUserById(uID);
@@ -31,6 +35,7 @@ public class Transaction {
     }
 
     public Transaction(String uID, boolean Status, Date tDate) {
+        this.tID = TransactionDB.createTransactionID();
         this.us = UserDB.getUserById(uID);
         this.Status = Status;
         this.tDate = tDate;

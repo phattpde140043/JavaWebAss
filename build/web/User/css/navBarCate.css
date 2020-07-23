@@ -34,7 +34,7 @@
     background-color: #00000000;
 }
 
-.dropdown-menu {
+#sub-menu .dropdown-menu {
     background-color: rgba(0, 0, 0, 0.9);
     color: #fff;
     border-radius: 0px;

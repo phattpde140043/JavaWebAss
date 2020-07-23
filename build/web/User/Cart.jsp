@@ -45,6 +45,7 @@
 
         <%
             Cart cart = (Cart) session.getAttribute("CART");
+            Transaction t = (Transaction) session.getAttribute("TRANSACTION");
             ArrayList<Book> bl = new ArrayList<Book>();
             ArrayList<Integer> quantity = new ArrayList<Integer>();
             if (cart != null) {
@@ -77,7 +78,7 @@
                             <% 
                                 if(cart.getItems() == null){
                             %>
-                                <h2>Your cart is currently empty!</h2>
+                            <h2>Your cart is currently empty!</h2>
                             <%
                             }
                             %>
@@ -147,7 +148,6 @@
                                 <div class="check-out w-100">
                                     <%
                                         Date d = new Date(Calendar.getInstance().getTime().getTime());
-                                        Transaction t = new Transaction(cart.getCustomerId(), false, d);
 
                                         ArrayList<Order> order = new ArrayList<>();
                                         for (int i = 0; i < bl.size(); i++) {
@@ -156,7 +156,6 @@
                                         }
                                         t.setCart(order);
                                     %>
-                                    <p><%=t.toString()%></p>
                                     <form action="checkout" method="post">
                                         <input type="submit" class="btn btn-primary w-100" value="Proceed to checkout">
                                     </form>
