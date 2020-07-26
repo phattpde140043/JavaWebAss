@@ -5,6 +5,7 @@
  */
 package Model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.sql.Date;
 
@@ -12,7 +13,7 @@ import java.sql.Date;
  *
  * @author tran phu phat
  */
-public class TransactionforDB {
+public class TransactionforDB implements Serializable{
 
     private String tID;
     private String uID;

@@ -65,8 +65,6 @@
             }
             double total = 0;
         %>
-
-
         <div class="container cart p-0">
             <div class="d-flex justify-content-start align-items-center">
                 <h5><a href="Home">Home</a></h5><h1 class="ml-2">Cart</h1>

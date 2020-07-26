@@ -91,7 +91,7 @@
             <result name="fail">Admin/Failed.jsp</result>       
         </action>
         <action name="checkout" class="StructUser.CheckoutAction">
-            <result name="success">User/Cart.jsp</result>
+            <result name="success">User/Index.jsp</result>
             <result name="fail">Admin/Failed.jsp</result>       
         </action>
         <action name="myOrder">

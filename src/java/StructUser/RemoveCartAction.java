@@ -21,7 +21,7 @@ import java.util.Map;
  * @author Admin
  */
 public class RemoveCartAction {
-    
+
     private String bid;
 
     private final String SUCCESS = "success";
@@ -34,42 +34,46 @@ public class RemoveCartAction {
     public void setBid(String bid) {
         this.bid = bid;
     }
-    
+
     public RemoveCartAction() {
     }
-    
+
     public String execute() throws Exception {
         Map session = ActionContext.getContext().getSession();
-        
+
         Cart cart = (Cart) session.get("CART");
-        
-        if(cart != null) {
+
+        if (cart != null) {
             System.out.println("remove + " + bid);
             cart.removeItemFromCart(bid);
             session.put("CART", cart);
         }
-        
+
         //set transaction
         ArrayList<Book> bl = new ArrayList<Book>();
         ArrayList<Integer> quantity = new ArrayList<Integer>();
-            if (cart != null) {
-                Map<String, Integer> items = cart.getItems();
+        if (cart != null) {
+            Map<String, Integer> items = cart.getItems();
 
-                if (items != null) {
-                    for (String bid : items.keySet()) {
-                        bl.add(BookDB.getById(bid));
-                    }
-                }
-
-                if (items != null) {
-                    for (int value : items.values()) {
-                        quantity.add(value);
-                    }
+            if (items != null) {
+                for (String bid : items.keySet()) {
+                    bl.add(BookDB.getById(bid));
                 }
             }
-            
-        Date d = new Date(Calendar.getInstance().getTime().getTime());
-        Transaction t = new Transaction(cart.getCustomerId(), false, d);
+
+            if (items != null) {
+                for (int value : items.values()) {
+                    quantity.add(value);
+                }
+            }
+        }
+
+        Transaction t = (Transaction) session.get("TRANSACTION");
+
+        if (t == null) {
+            Date d = new Date(Calendar.getInstance().getTime().getTime());
+            t = new Transaction(cart.getCustomerId(), false, d);
+        }
 
         ArrayList<Order> order = new ArrayList<>();
         for (int i = 0; i < bl.size(); i++) {
@@ -78,8 +82,8 @@ public class RemoveCartAction {
         }
         t.setCart(order);
         session.put("TRANSACTION", t);
-        
+
         return SUCCESS;
     }
-    
+
 }

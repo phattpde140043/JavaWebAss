@@ -9,6 +9,8 @@ import Controller.TransactionDB;
 import Model.Cart;
 import Model.Transaction;
 import com.opensymphony.xwork2.ActionContext;
+import java.sql.Date;
+import java.util.Calendar;
 import java.util.Map;
 
 /**
@@ -29,14 +31,17 @@ public class CheckoutAction {
 
         TransactionDB db = new TransactionDB();
 
-        System.out.println("tran : " + t.toString());
         db.AddnewTransaction(t);
 
-        Transaction n = new Transaction();
-        Cart c = new Cart();
+        String uid = (String) session.get("ID");
 
-        session.put("TRANSACTION", n);
+        Date d = new Date(Calendar.getInstance().getTime().getTime());
+
+        Transaction n = new Transaction();
+        Cart c = new Cart(uid);
+
         session.put("CART", c);
+        session.remove("TRANSACTION");
 
         return SUCCESS;
 

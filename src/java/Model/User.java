@@ -5,11 +5,13 @@
  */
 package Model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author ASUS
  */
-public class User {
+public class User implements Serializable{
 
     private String uID;
     private String uEmail;

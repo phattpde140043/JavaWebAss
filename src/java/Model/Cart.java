@@ -6,6 +6,7 @@
 package Model;
 
 import Controller.BookDB;
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,7 +14,7 @@ import java.util.Map;
  *
  * @author tran phu phat
  */
-public class Cart {
+public class Cart implements Serializable {
 
     private String customerId;
     private Map<String, Integer> items;

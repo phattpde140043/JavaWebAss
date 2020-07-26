@@ -7,6 +7,7 @@ package Model;
 
 import Controller.TransactionDB;
 import Controller.UserDB;
+import java.io.Serializable;
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.List;
  *
  * @author tran phu phat
  */
-public class Transaction {
+public class Transaction implements Serializable{
     private String tID;
     private User us;
     private List<Order> Cart= new ArrayList<>() ;

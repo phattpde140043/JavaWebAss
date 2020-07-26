@@ -52,7 +52,16 @@
             <div class="title d-flex justify-content-between align-items-center">
 
                 <!--//transaction ID-->
-                <h1>Order details #<span><%=tl.get(0).gettID()%></span> - <span><a class="badge badge-warning">Pending</a></span></h1>
+                <h1>Order details #<span><%=tl.get(0).gettID()%></span> -
+                    <%
+                        if(tl.get(0).isStatus()){
+                    %>
+                    <span><a class="badge badge-success">Success</a></span>
+                    <% } else { %>
+                    <span><a class="badge badge-warning">Pending</a></span>
+                    <% } %>
+
+                </h1>
                 <!--transaction date-->
                 <p class="date">Purchase day: <%=tl.get(0).gettDate()%></p>
             </div>
@@ -120,7 +129,7 @@
                                     <span>Sku: <%=b.getbId()%></span>
                                 </div>
                             </td>
-                            <td><%=b.getbPrice()%></td>
+                            <td><%=b.getbPrice() / 20000%></td>
                             <td><%=ol.get(i).gettQuatity()%></td>
                             <td>$<%=(ol.get(i).gettQuatity() * b.getbPrice()) / 20000%></td>
                         </tr>

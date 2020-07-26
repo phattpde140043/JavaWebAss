@@ -6,12 +6,13 @@
 package Model;
 
 import Controller.BookDB;
+import java.io.Serializable;
 
 /**
  *
  * @author tran phu phat
  */
-public class Order {
+public class Order implements Serializable{
 
     private Book book;
     private int tQuatity;

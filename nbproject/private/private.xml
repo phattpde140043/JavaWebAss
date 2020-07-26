@@ -3,13 +3,37 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/User/Cart.jsp</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/User/components/navBar.jsp</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/src/java/Model/Cart.java</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/src/java/struts.xml</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/Admin/components/orderUpdate.jsp</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/Admin/components/dashboard.jsp</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/User/MyOrder.jsp</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/Admin/components/books.jsp</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/User/css/orderDetail.css</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/src/java/Model/Order.java</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/Admin/BookRoute.jsp</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/User/components/sliderOffer.jsp</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/Admin/components/dataComponents/transactions.jsp</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/User/Index.jsp</file>
             <file>file:/C:/Users/Admin/Desktop/JavaWebAss/src/java/StructUser/AddToCartAction.java</file>
             <file>file:/C:/Users/Admin/Desktop/JavaWebAss/src/java/Model/Transaction.java</file>
-            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/User/Cart.jsp</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/src/java/Controller/TransactionDB.java</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/src/java/Model/User.java</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/Admin/UserRoute.jsp</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/Admin/components/orders.jsp</file>
             <file>file:/C:/Users/Admin/Desktop/JavaWebAss/src/java/StructUser/CheckoutAction.java</file>
             <file>file:/C:/Users/Admin/Desktop/JavaWebAss/src/java/StructUser/RemoveCartAction.java</file>
-            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/src/java/struts.xml</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/Admin/components/topBar.jsp</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/src/java/Model/TransactionforDB.java</file>
             <file>file:/C:/Users/Admin/Desktop/JavaWebAss/src/java/StructAdmin/LoginAction.java</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/User/orderDetail.jsp</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/User/Latest.jsp</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/Admin/Index.jsp</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/User/css/cart.css</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/User/components/navBarCate.jsp</file>
+            <file>file:/C:/Users/Admin/Desktop/JavaWebAss/web/User/css/footer.css</file>
         </group>
     </open-files>
 </project-private>

@@ -73,8 +73,13 @@ public class AddToCartAction {
                 }
             }
             
-        Date d = new Date(Calendar.getInstance().getTime().getTime());
-        Transaction t = new Transaction(cart.getCustomerId(), false, d);
+        Transaction t = (Transaction) session.get("TRANSACTION");
+
+        if (t == null) {
+            Date d = new Date(Calendar.getInstance().getTime().getTime());
+            t = new Transaction(cart.getCustomerId(), false, d);
+        }
+            
 
         ArrayList<Order> order = new ArrayList<>();
         for (int i = 0; i < bl.size(); i++) {
